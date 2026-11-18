@@ -265,7 +265,7 @@ export function JourneyMap() {
     <section
       aria-labelledby="journey-title"
       data-theme-surface="light"
-      className="relative isolate h-svh min-h-[40rem] overflow-hidden bg-[#e5e3df]"
+      className="relative isolate h-svh min-h-[40rem] overflow-hidden bg-[#e4e9ef]"
     >
       <div
         ref={stage}
@@ -318,9 +318,9 @@ export function JourneyMap() {
                 y={coastData.bounds[1]}
                 width={coastData.bounds[2] - coastData.bounds[0]}
                 height={coastData.bounds[3] - coastData.bounds[1]}
-                fill="#a0d3d3"
+                fill="#b9c7d5"
               />
-              <path d={coastData.d} fill="#e5e3df" fillRule="evenodd" />
+              <path d={coastData.d} fill="#e4e9ef" fillRule="evenodd" />
               {coastData.roads ? (
                 <path
                   d={coastData.roads}
@@ -365,7 +365,7 @@ export function JourneyMap() {
         <div
           ref={card}
           // Phones: a compact card (tighter padding, smaller type) so the route stays in view.
-          className="pointer-events-auto relative flex w-full flex-col gap-3 overflow-hidden rounded-md bg-turquoise-160 p-4 text-white shadow-soft before:absolute before:inset-x-0 before:top-0 before:h-1 before:bg-sun sm:max-w-[23rem] sm:gap-6 sm:p-6"
+          className="pointer-events-auto relative flex w-full flex-col gap-3 overflow-hidden rounded-md bg-turquoise-160 p-4 text-white shadow-soft sm:max-w-[23rem] sm:gap-6 sm:p-6"
         >
           <div className="flex flex-col gap-1.5 sm:gap-3">
             <h2 id="journey-title" className="text-heading-6 sm:text-heading-5">

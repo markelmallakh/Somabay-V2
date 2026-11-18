@@ -120,7 +120,7 @@ export function AboutJourney({
       {/* Sticky stage behind the copy. */}
       <div
         data-stage
-        className="sticky top-0 -z-10 h-svh overflow-hidden bg-[#0b4456] [mask-image:linear-gradient(to_bottom,transparent,#000_var(--feather))] [--feather:0%]"
+        className="sticky top-0 -z-10 h-svh overflow-hidden bg-deep [mask-image:linear-gradient(to_bottom,transparent,#000_var(--feather))] [--feather:0%]"
       >
         <div
           data-film
@@ -135,7 +135,7 @@ export function AboutJourney({
         <div
           aria-hidden
           data-veil
-          className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_80%_at_85%_0%,rgb(255_255_255/0.14),transparent_60%),linear-gradient(to_bottom,#0b4456_0%,#136f86_55%,#21899f_100%)] motion-reduce:hidden"
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(120%_80%_at_85%_0%,rgb(255_255_255/0.14),transparent_60%),linear-gradient(to_bottom,#082e30_0%,#0c3d40_55%,#175659_100%)] motion-reduce:hidden"
         />
         <div
           aria-hidden

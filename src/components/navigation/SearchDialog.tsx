@@ -197,7 +197,7 @@ export function SearchDialog({ open, onClose, index, cards }: SearchDialogProps)
           animate={sheet ? { y: 0 } : { opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: sheet ? 0.55 : 0.6, ease: easeOutExpo }}
           style={{ transformOrigin: "50% 0%" }}
-          className="absolute top-[calc(var(--header-height)+0.75rem)] left-1/2 flex max-h-[min(42rem,calc(100svh-var(--header-height)-1.5rem))] w-[min(36rem,calc(100vw-2rem))] -translate-x-1/2 flex-col overflow-hidden rounded-md bg-white shadow-[0_24px_70px_rgb(18_58_70/0.22)] max-sm:top-auto max-sm:bottom-0 max-sm:left-0 max-sm:h-[85svh] max-sm:max-h-[85svh] max-sm:w-full max-sm:translate-x-0 max-sm:rounded-b-none max-sm:pb-[env(safe-area-inset-bottom)]"
+          className="absolute top-[calc(var(--header-height)+0.75rem)] left-1/2 flex max-h-[min(42rem,calc(100svh-var(--header-height)-1.5rem))] w-[min(36rem,calc(100vw-2rem))] -translate-x-1/2 flex-col overflow-hidden rounded-md bg-white shadow-[0_24px_70px_rgb(15_30_53/0.22)] max-sm:top-auto max-sm:bottom-0 max-sm:left-0 max-sm:h-[85svh] max-sm:max-h-[85svh] max-sm:w-full max-sm:translate-x-0 max-sm:rounded-b-none max-sm:pb-[env(safe-area-inset-bottom)]"
         >
           <span
             aria-hidden

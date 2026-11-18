@@ -76,8 +76,8 @@ export function FileField({
           error
             ? "border-alert"
             : over
-              ? "border-turquoise bg-turquoise-5"
-              : "border-ink/25 hover:border-turquoise",
+              ? "border-deep bg-turquoise-5"
+              : "border-ink/25 hover:border-deep",
         )}
       >
         <Icon

@@ -41,7 +41,7 @@ export function JobsList() {
                   href={`${routes.career(job.slug)}#apply`}
                   variant="outline"
                   icon="arrow-up-right"
-                  className="relative z-10 shrink-0 self-start border-turquoise text-turquoise md:self-center"
+                  className="relative z-10 shrink-0 self-start border-deep text-turquoise md:self-center"
                   aria-label={`Apply now for ${job.title}`}
                 >
                   Apply now

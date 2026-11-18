@@ -155,7 +155,7 @@ export function SportsRow() {
                       </span>
                       <span
                         aria-hidden
-                        className="grid size-7 shrink-0 place-items-center rounded-full bg-turquoise text-white sm:size-10"
+                        className="grid size-7 shrink-0 place-items-center rounded-full bg-deep text-white sm:size-10"
                       >
                         <Icon name="arrow-up-right" className="size-3.5 sm:size-4.5" />
                       </span>

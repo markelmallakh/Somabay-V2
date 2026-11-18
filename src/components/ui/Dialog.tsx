@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Icon } from "./Icon";
 
 /** Brand orange and turquoise layers that lead the drawer panel in (React Bits "staggered menu"). */
-const DRAWER_LAYERS = ["#F58025", "#00B2BA"];
+const DRAWER_LAYERS = ["#00b2ba", "#082e30"];
 const easeInCubic = [0.55, 0, 1, 0.45] as const;
 /** Small head start so the native dialog is open before the sweep begins. */
 const LEAD = 0.05;

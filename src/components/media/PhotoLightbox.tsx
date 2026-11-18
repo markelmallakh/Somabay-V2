@@ -124,7 +124,7 @@ export function PhotoLightbox({ images, label, open, onChange, onClose }: PhotoL
                       aria-hidden
                       className={cn(
                         "pointer-events-none absolute -inset-1 rounded-md border-2 transition-colors duration-300",
-                        current ? "border-turquoise" : "border-transparent",
+                        current ? "border-deep" : "border-transparent",
                       )}
                     />
                   </button>
@@ -139,7 +139,7 @@ export function PhotoLightbox({ images, label, open, onChange, onClose }: PhotoL
             <div className="flex gap-2">
               <button
                 type="button"
-                className="wave grid size-12 place-items-center rounded-md border border-white/40 [--wave:#fff] hover:text-ink"
+                className="grid size-12 place-items-center rounded-full border border-white/40 [--wave:#fff] hover:text-ink"
                 onClick={() => onChange(((open ?? 0) - 1 + images.length) % images.length)}
                 aria-label="Previous photo"
               >
@@ -147,7 +147,7 @@ export function PhotoLightbox({ images, label, open, onChange, onClose }: PhotoL
               </button>
               <button
                 type="button"
-                className="wave grid size-12 place-items-center rounded-md border border-white/40 [--wave:#fff] hover:text-ink"
+                className="grid size-12 place-items-center rounded-full border border-white/40 [--wave:#fff] hover:text-ink"
                 onClick={() => onChange(((open ?? 0) + 1) % images.length)}
                 aria-label="Next photo"
               >

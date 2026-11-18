@@ -206,16 +206,14 @@ export function ProjectMasterplan({ name }: { name: string }) {
                   aria-hidden
                   className={cn(
                     "absolute inset-1.5 rounded-full",
-                    on
-                      ? "bg-deep-orange/30"
-                      : "animate-ping bg-turquoise/35 [animation-duration:2.4s]",
+                    on ? "bg-deep-orange/30" : "animate-ping bg-deep/35 [animation-duration:2.4s]",
                   )}
                 />
                 <span
                   aria-hidden
                   className={cn(
                     "relative grid size-8 place-items-center rounded-full border-2 border-white shadow-float transition-[background-color,transform] duration-500 group-hover:scale-110",
-                    on ? "bg-deep-orange" : "bg-turquoise",
+                    on ? "bg-deep-orange" : "bg-deep",
                   )}
                 >
                   <Icon name={on ? "close" : "plus"} className="size-3.5 text-white" />

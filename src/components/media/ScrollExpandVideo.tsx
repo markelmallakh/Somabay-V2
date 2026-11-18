@@ -83,7 +83,7 @@ export function ScrollExpandVideo({
           <div
             data-shade
             aria-hidden
-            className="absolute inset-0 bg-[linear-gradient(to_top,rgb(18_58_70/0.85),rgb(18_58_70/0.25)_55%,rgb(18_58_70/0.1))]"
+            className="absolute inset-0 bg-[linear-gradient(to_top,rgb(8_46_48/0.85),rgb(8_46_48/0.25)_55%,rgb(8_46_48/0.1))]"
           />
         </div>
         <Container className="relative flex h-full items-end pb-16 md:pb-24">

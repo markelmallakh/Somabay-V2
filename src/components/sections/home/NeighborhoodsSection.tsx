@@ -11,13 +11,14 @@ export function NeighborhoodsSection() {
     neighborhoods.map((item) => [item.slug, routes.neighborhood(item.slug)]),
   );
   const cta = (
-    <Button href={neighborhoodsIntro.cta.href} variant="solid" icon="arrow-right">
+    <Button href={neighborhoodsIntro.cta.href} variant="turquoise" icon="arrow-right">
       {neighborhoodsIntro.cta.label}
     </Button>
   );
   return (
     <section
       aria-labelledby="neighborhoods-title"
+      data-theme-surface="light"
       // A clean white ground, so the photo cards carry the colour.
       className="relative overflow-hidden bg-white py-section text-ink"
     >
@@ -30,7 +31,13 @@ export function NeighborhoodsSection() {
           <HeadingRow
             id="neighborhoods-title"
             eyebrow={neighborhoodsIntro.eyebrow}
-            title={neighborhoodsIntro.title}
+            // Two lines: "Somabay" over "Neighborhoods".
+            title={neighborhoodsIntro.title.split(" ").map((word, index) => (
+              <span key={word} className="block">
+                {index > 0 ? " " : null}
+                {word}
+              </span>
+            ))}
             description={neighborhoodsIntro.description}
             aside={<div>{cta}</div>}
           />

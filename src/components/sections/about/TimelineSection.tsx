@@ -234,7 +234,7 @@ export function TimelineSection({ intro, milestones, image }: TimelineSectionPro
                           className={cn(
                             "size-3.5 rounded-full border transition-[background-color,border-color,scale,box-shadow] duration-700 ease-out-expo",
                             selected
-                              ? "scale-125 border-turquoise bg-turquoise shadow-[0_0_0_6px_rgb(0_178_186/0.3)]"
+                              ? "scale-125 border-deep bg-deep shadow-[0_0_0_6px_rgb(0_178_186/0.3)]"
                               : passed
                                 ? "border-white bg-white"
                                 : "border-white/60 bg-black/30 group-hover:border-white",

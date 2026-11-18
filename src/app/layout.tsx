@@ -1,15 +1,25 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Open_Sans } from "next/font/google";
+import { Barlow_Condensed, DM_Sans, Open_Sans } from "next/font/google";
 import { MotionProvider } from "@/components/animations/MotionProvider";
 import { SiteMotion } from "@/components/animations/SiteMotion";
 import { TouchHover } from "@/components/animations/TouchHover";
 import { SmoothScroll } from "@/components/animations/SmoothScroll";
 import { SiteFooter } from "@/components/layout/SiteFooter";
 import { SiteHeader } from "@/components/layout/SiteHeader";
+import { HomepageOnly } from "@/components/navigation/HomepageOnly";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
-// Headings use Georgia (Figma "Desktop/Heading"), a system font, so only the sans families load.
+// Headlines use Avenir Next Condensed Bold (built into macOS and iOS). Barlow Condensed is the web
+// fallback for systems without it (Windows, Android), so headlines keep the same condensed shape.
+const barlowCondensed = Barlow_Condensed({
+  subsets: ["latin"],
+  weight: ["600", "700"],
+  display: "swap",
+  variable: "--font-barlow-condensed",
+  fallback: ["Arial Narrow", "sans-serif"],
+});
+
 const dmSans = DM_Sans({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
@@ -52,14 +62,17 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#404346",
+  themeColor: "#082e30",
   width: "device-width",
   initialScale: 1,
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${dmSans.variable} ${openSans.variable}`}>
+    <html
+      lang="en"
+      className={`${dmSans.variable} ${openSans.variable} ${barlowCondensed.variable}`}
+    >
       <body>
         <a
           href="#main-content"
@@ -78,6 +91,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <SiteFooter />
           <SiteMotion />
           <TouchHover />
+          {/* Homepage-only demo: links that leave the homepage do nothing. */}
+          {siteConfig.homepageOnly ? <HomepageOnly /> : null}
         </MotionProvider>
       </body>
     </html>

@@ -80,7 +80,7 @@ export function MasterplanAerial({ hotspots }: { hotspots: MasterplanHotspot[] }
               quality={85}
               fill
             />
-            <div aria-hidden className="absolute inset-0 bg-[#123a46]/10" />
+            <div aria-hidden className="absolute inset-0 bg-[#0f1e35]/10" />
             <ul aria-label="Places on the masterplan">
               {hotspots.map((spot) => {
                 const on = visible(spot);
@@ -101,15 +101,15 @@ export function MasterplanAerial({ hotspots }: { hotspots: MasterplanHotspot[] }
                         "group/pin flex items-center rounded-full p-2 transition-[background-color,box-shadow,opacity,scale] duration-500 ease-out-expo",
                         on ? "opacity-100" : "pointer-events-none scale-75 opacity-0",
                         selected
-                          ? "bg-turquoise shadow-float"
-                          : "bg-turquoise/25 backdrop-blur-sm hover:bg-white hover:shadow-float focus-visible:bg-white",
+                          ? "bg-deep shadow-float"
+                          : "bg-deep/25 backdrop-blur-sm hover:bg-white hover:shadow-float focus-visible:bg-white",
                       )}
                     >
                       <span
                         aria-hidden
                         className={cn(
                           "size-3.5 shrink-0 rounded-full outline-3 transition-colors duration-500",
-                          selected ? "bg-white outline-white/35" : "bg-turquoise outline-white",
+                          selected ? "bg-white outline-white/35" : "bg-deep outline-white",
                         )}
                       />
                       <span
@@ -286,7 +286,7 @@ export function MasterplanAerial({ hotspots }: { hotspots: MasterplanHotspot[] }
                     external
                     variant="outline"
                     icon="arrow-up-right"
-                    className="border-turquoise text-turquoise-160"
+                    className="border-deep text-turquoise-160"
                   >
                     View menu
                   </Button>
@@ -316,7 +316,7 @@ export function MasterplanAerial({ hotspots }: { hotspots: MasterplanHotspot[] }
                   <div className="flex gap-2">
                     <button
                       type="button"
-                      className="wave grid size-11 place-items-center rounded-md border border-line transition-colors hover:border-turquoise hover:text-white"
+                      className="grid size-11 place-items-center rounded-full border border-line transition-colors hover:border-aqua hover:bg-aqua hover:text-white"
                       onClick={() => step(-1)}
                       aria-label="Previous place"
                     >
@@ -324,7 +324,7 @@ export function MasterplanAerial({ hotspots }: { hotspots: MasterplanHotspot[] }
                     </button>
                     <button
                       type="button"
-                      className="wave grid size-11 place-items-center rounded-md border border-line transition-colors hover:border-turquoise hover:text-white"
+                      className="grid size-11 place-items-center rounded-full border border-line transition-colors hover:border-aqua hover:bg-aqua hover:text-white"
                       onClick={() => step(1)}
                       aria-label="Next place"
                     >

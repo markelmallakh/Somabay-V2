@@ -232,7 +232,7 @@ export function ThingsToDoSection() {
               under the slider). */}
           <h2
             id="things-title"
-            className="flex justify-center gap-[0.25em] font-serif text-[clamp(2.5rem,8vw,7.5rem)] leading-[1.2] sm:block"
+            className="flex justify-center gap-[0.25em] font-serif text-[clamp(3.25rem,11vw,11rem)] leading-[1] sm:block"
           >
             <span className="sr-only">Things To Do</span>
             <SplitTitle text="Things" show={shown} delay={0.05} />
@@ -327,7 +327,7 @@ export function ThingsToDoSection() {
                 {current && (
                   <span
                     aria-hidden
-                    className="absolute right-4 bottom-4 grid size-10 scale-75 place-items-center rounded-full bg-turquoise text-white opacity-0 transition-[opacity,scale] duration-700 ease-out-expo group-hover:scale-100 group-hover:opacity-100 group-focus-visible:scale-100 group-focus-visible:opacity-100 sm:right-6 sm:bottom-6 sm:size-11"
+                    className="absolute right-4 bottom-4 grid size-10 scale-75 place-items-center rounded-full bg-deep text-white opacity-0 transition-[opacity,scale] duration-700 ease-out-expo group-hover:scale-100 group-hover:opacity-100 group-focus-visible:scale-100 group-focus-visible:opacity-100 sm:right-6 sm:bottom-6 sm:size-11"
                   >
                     <Icon name="arrow-chip" strokeWidth={1.4} className="size-6" />
                   </span>
@@ -363,7 +363,7 @@ export function ThingsToDoSection() {
           <button
             type="button"
             onClick={() => step(-1)}
-            className="wave grid size-11 place-items-center rounded-md border border-ink/15 transition-colors duration-500 hover:border-turquoise hover:text-white sm:size-12"
+            className="grid size-11 place-items-center rounded-full border border-ink/15 transition-colors duration-500 hover:border-aqua hover:bg-aqua hover:text-white sm:size-12"
           >
             <span className="sr-only">Previous activity</span>
             <Icon name="arrow-right" className="size-5 rotate-180" />
@@ -371,13 +371,13 @@ export function ThingsToDoSection() {
           <button
             type="button"
             onClick={() => step(1)}
-            className="wave grid size-11 place-items-center rounded-md border border-ink/15 text-ink transition-colors duration-500 hover:border-turquoise hover:text-white sm:size-12"
+            className="grid size-11 place-items-center rounded-full border border-ink/15 text-ink transition-colors duration-500 hover:border-aqua hover:bg-aqua hover:text-white sm:size-12"
           >
             <span className="sr-only">Next activity</span>
             <Icon name="arrow-right" className="size-5" />
           </button>
         </m.div>
-        <p className="order-first hidden text-right font-serif text-[clamp(2.75rem,8vw,7.5rem)] leading-[1.2] sm:block md:col-span-2 lg:order-none lg:col-span-1">
+        <p className="order-first hidden text-right font-serif text-[clamp(3.25rem,11vw,11rem)] leading-[1] sm:block md:col-span-2 lg:order-none lg:col-span-1">
           <SplitTitle text="To Do" show={shown} delay={0.2} />
         </p>
       </Container>

@@ -96,7 +96,7 @@ export function InfoRows({ id, eyebrow, title, items, aside }: InfoRowsProps) {
                       {row}
                       <span
                         aria-hidden
-                        className="absolute top-1/2 right-0 grid size-9 -translate-y-1/2 place-items-center overflow-hidden rounded-full bg-turquoise text-white transition-colors duration-500 group-hover:bg-turquoise-160 sm:size-11"
+                        className="absolute top-1/2 right-0 grid size-9 -translate-y-1/2 place-items-center overflow-hidden rounded-full bg-deep text-white transition-colors duration-500 group-hover:bg-turquoise-160 sm:size-11"
                       >
                         <Icon
                           name="arrow-up-right"

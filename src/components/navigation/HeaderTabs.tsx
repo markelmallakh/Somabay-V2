@@ -157,8 +157,13 @@ export function HeaderTabs({ items, onOpenChange, onDark }: HeaderTabsProps) {
                   }}
                   className={cn(
                     "group relative flex items-center gap-1.5 text-body-xs font-semibold tracking-[0.12em] uppercase transition-colors duration-500",
+                    // The open tab reads bolder without changing its width: a hairline text shadow
+                    // either side thickens the strokes in place (a heavier weight would widen it).
                     open
-                      ? "text-turquoise"
+                      ? cn(
+                          "[text-shadow:0.4px_0_0_currentColor,-0.4px_0_0_currentColor]",
+                          onDark ? "text-white" : "text-ink",
+                        )
                       : onDark
                         ? "text-white/90 hover:text-white"
                         : "text-ink hover:text-turquoise",
@@ -176,7 +181,7 @@ export function HeaderTabs({ items, onOpenChange, onDark }: HeaderTabsProps) {
                   <span
                     aria-hidden
                     className={cn(
-                      "absolute inset-x-0 bottom-0 h-0.5 origin-left bg-turquoise transition-transform duration-500 ease-out-expo",
+                      "absolute inset-x-0 bottom-0 h-0.5 origin-left bg-current transition-transform duration-500 ease-out-expo",
                       open ? "scale-x-100" : "scale-x-0",
                     )}
                   />
@@ -234,13 +239,14 @@ export function HeaderTabs({ items, onOpenChange, onDark }: HeaderTabsProps) {
             animate={{ clipPath: "inset(0% 0% 0% 0%)" }}
             exit={{ clipPath: "inset(0% 0% 100% 0%)" }}
             transition={{ duration: 0.6, ease: easeOutExpo }}
-            className="absolute inset-x-0 top-full hidden border-t border-line bg-white text-ink shadow-[0_24px_60px_rgb(18_58_70/0.14)] lg:block"
+            // A rounded white panel just under the header, inset by the page padding.
+            className="absolute inset-x-gutter top-full mx-auto mt-2 hidden max-w-[calc(var(--container-site)-2*var(--spacing-gutter))] overflow-hidden rounded-media bg-white text-ink shadow-[0_30px_70px_-20px_rgb(0_0_0/0.35)] lg:block"
           >
             <AnimatePresence mode="wait" initial={false}>
               <m.div
                 key={item.href}
                 exit={{ opacity: 0, transition: { duration: 0.15 } }}
-                className="mx-auto grid max-w-site grid-cols-12 gap-10 px-gutter py-10"
+                className="grid grid-cols-12 gap-10 p-10"
               >
                 <m.div {...rise(0)} className="col-span-3">
                   {/* A picture of the section, not a link: the pages beside it are the way in. */}

@@ -52,7 +52,7 @@ export function MobileFilters({
 
   const count =
     active > 0 ? (
-      <span className="grid size-5 place-items-center rounded-full bg-turquoise font-sans text-[0.6875rem] font-semibold text-white tabular-nums">
+      <span className="grid size-5 place-items-center rounded-full bg-deep font-sans text-[0.6875rem] font-semibold text-white tabular-nums">
         {active}
       </span>
     ) : null;

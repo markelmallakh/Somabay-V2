@@ -51,7 +51,7 @@ export function SegmentedControl<T extends string>({
       className={cn(
         "scrollbar-none inline-flex max-w-full gap-1 overflow-x-auto rounded-md p-1",
         tone === "light"
-          ? "bg-white shadow-[0_1px_3px_rgb(18_58_70/0.06)]"
+          ? "bg-white shadow-[0_1px_3px_rgb(15_30_53/0.06)]"
           : "border border-white/15 glass",
         className,
       )}
@@ -73,7 +73,7 @@ export function SegmentedControl<T extends string>({
               "relative flex shrink-0 flex-col items-center justify-center rounded-[3px] whitespace-nowrap transition-colors duration-500",
               size === "sm" ? "min-h-8 px-3 text-body-xs" : "min-h-10 px-5 text-[0.8125rem]",
               checked
-                ? "bg-turquoise text-white"
+                ? "bg-deep text-white"
                 : tone === "light"
                   ? "text-slate hover:text-turquoise-160"
                   : "text-white/80 hover:text-white",

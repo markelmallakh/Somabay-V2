@@ -99,7 +99,7 @@ export function UnitCard({ unit, href }: { unit: Unit; href: string }) {
         {specRow("light")}
         <div className="mt-auto flex items-center justify-between gap-4 border-t border-ink/8 pt-2.5 text-body-xs font-semibold tracking-label text-ink uppercase sm:pt-3">
           Explore
-          <span className="grid size-8 shrink-0 place-items-center rounded-full bg-turquoise text-white sm:size-9">
+          <span className="grid size-8 shrink-0 place-items-center rounded-full bg-deep text-white sm:size-9">
             <Icon name="arrow-right" className="size-4" />
           </span>
         </div>

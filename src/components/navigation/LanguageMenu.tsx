@@ -126,7 +126,7 @@ export function LanguageMenu({
                   "inline-flex min-h-10 items-center gap-2 rounded-md border px-3 py-1.5 text-body-xs transition-colors",
                   tone === "dark"
                     ? "border-white/25 text-white hover:border-white/60"
-                    : "border-line text-ink hover:border-turquoise/60",
+                    : "border-line text-ink hover:border-deep/60",
                 )
             : variant === "compact"
               ? "flex min-h-11 items-center gap-0.5 px-1.5 uppercase transition-opacity hover:opacity-70"
@@ -166,7 +166,7 @@ export function LanguageMenu({
             transition={{ duration: 0.45, ease: easeOutExpo }}
             style={{ transformOrigin: above ? "100% 100%" : "100% 0%" }}
             className={cn(
-              "popover-sheet absolute right-0 z-50 w-52 overflow-hidden rounded-md border border-line bg-white text-ink normal-case shadow-[0_18px_50px_rgb(18_58_70/0.18)]",
+              "popover-sheet absolute right-0 z-50 w-52 overflow-hidden rounded-md border border-line bg-white text-ink normal-case shadow-[0_18px_50px_rgb(15_30_53/0.18)]",
               above ? "bottom-[calc(100%+0.625rem)]" : "top-[calc(100%+0.875rem)]",
             )}
           >

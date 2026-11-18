@@ -73,11 +73,13 @@ export function HeaderBar({ temperature, forecast, data }: HeaderBarProps) {
     width: number;
     height: number;
   } | null>(null);
-  // A header tab's mega menu is open: the bar and the panel read as one white sheet.
-  const [desktopMegaOpen, setMegaOpen] = useState(false);
-  // Phones and tablets: the header tab whose white panel is open under the header.
+  // A header tab's mega menu is open (desktop): it floats as a rounded white panel under the
+  // header, and the bar keeps its own look (transparent over a hero).
+  const [, setMegaOpen] = useState(false);
+  // Phones and tablets: the header tab whose white panel is open under the header; there the bar
+  // and the panel read as one white sheet.
   const [phoneTab, setPhoneTab] = useState<string | null>(null);
-  const megaOpen = desktopMegaOpen || phoneTab !== null;
+  const megaOpen = phoneTab !== null;
   const tabItems = data.menu.filter((item) => HEADER_TAB_LABELS.includes(item.label));
   // The footer carries the weather and language too, so the bar steps aside once it arrives.
   const [atFooter, setAtFooter] = useState(false);
@@ -149,6 +151,8 @@ export function HeaderBar({ temperature, forecast, data }: HeaderBarProps) {
     setMenuOpen(true);
   };
   const toggleMenu = () => {
+    // Homepage-only demo: the menu button stays put (only the header dropdowns open).
+    if (siteConfig.homepageOnly) return;
     if (menuOpen) {
       closeMenu();
       return;
@@ -212,7 +216,7 @@ export function HeaderBar({ temperature, forecast, data }: HeaderBarProps) {
           className={cn(
             "absolute inset-0 transition-[opacity,background-color,box-shadow] duration-500 ease-in-out",
             megaOpen
-              ? "bg-white/[0.97] shadow-[0_1px_0_rgb(18_58_70/0.06),0_4px_10px_-6px_rgb(18_58_70/0.09)] backdrop-blur-lg"
+              ? "bg-white/[0.97] shadow-[0_1px_0_rgb(15_30_53/0.06),0_4px_10px_-6px_rgb(15_30_53/0.09)] backdrop-blur-lg"
               : // At the top of light pages: fully transparent, on the page's own colour.
                 "bg-transparent shadow-none",
             backdropOverHero ? "opacity-0" : "opacity-100",
@@ -259,7 +263,7 @@ export function HeaderBar({ temperature, forecast, data }: HeaderBarProps) {
                   draws in slightly on hover. */}
               {/* Phones: the lines sit in a turquoise square, the same over a photo or the white
                   bar. Desktop: the lines alone in the bar's accent colour. */}
-              <span className="grid size-10 place-items-center rounded-md bg-turquoise text-white lg:contents lg:text-inherit">
+              <span className="grid size-10 place-items-center rounded-md bg-deep text-white lg:contents lg:text-inherit">
                 <svg
                   aria-hidden
                   viewBox="0 0 42 22"
@@ -443,7 +447,7 @@ export function HeaderBar({ temperature, forecast, data }: HeaderBarProps) {
               <span
                 aria-hidden
                 className={cn(
-                  "absolute inset-x-0 bottom-0 h-0.5 origin-left bg-turquoise transition-transform duration-500 ease-out-expo",
+                  "absolute inset-x-0 bottom-0 h-0.5 origin-left bg-deep transition-transform duration-500 ease-out-expo",
                   phoneTab === item.label ? "scale-x-100" : "scale-x-0",
                 )}
               />

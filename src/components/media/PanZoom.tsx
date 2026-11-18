@@ -227,7 +227,7 @@ export function PanZoom({ aspect, focusX = 0.5, className, label, children }: Pa
   };
 
   const control =
-    "grid size-10 place-items-center bg-white/95 text-ink transition-colors active:bg-turquoise active:text-white disabled:opacity-40";
+    "grid size-10 place-items-center bg-white/95 text-ink transition-colors active:bg-deep active:text-white disabled:opacity-40";
 
   return (
     <div

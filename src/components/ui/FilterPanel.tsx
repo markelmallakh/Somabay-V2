@@ -56,7 +56,7 @@ export function FilterPanel({ groups, value, onChange, className }: FilterPanelP
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0, opacity: 0 }}
                 transition={{ duration: 0.4, ease: easeOutExpo }}
-                className="grid size-6 place-items-center rounded-full bg-turquoise font-sans text-body-xs font-semibold text-white tabular-nums"
+                className="grid size-6 place-items-center rounded-full bg-deep font-sans text-body-xs font-semibold text-white tabular-nums"
                 aria-label={`${total} active`}
               >
                 {total}

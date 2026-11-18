@@ -117,7 +117,7 @@ export function NeighborhoodSectionNav({
                   <span
                     aria-hidden
                     className={cn(
-                      "absolute inset-x-0 -top-px h-0.5 origin-left bg-turquoise transition-transform duration-500 ease-out-expo",
+                      "absolute inset-x-0 -top-px h-0.5 origin-left bg-deep transition-transform duration-500 ease-out-expo",
                       on ? "scale-x-100" : "scale-x-0",
                     )}
                   />
@@ -133,7 +133,7 @@ export function NeighborhoodSectionNav({
             icon={cta.external ? "arrow-up-right" : undefined}
             variant="primary"
             size="sm"
-            className="min-h-8 shrink-0 px-5"
+            className="shrink-0"
           >
             {cta.label}
           </Button>

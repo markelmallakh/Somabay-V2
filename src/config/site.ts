@@ -1,6 +1,13 @@
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://somabay.com";
 
 export const siteConfig = {
+  /**
+   * Homepage-only demo: every link that would leave the homepage (other pages, CTAs, social and
+   * external links) does nothing, and the menu button does not open the menu, while the homepage
+   * itself, its header dropdowns, drawers and other on-page interactions keep working. Set to
+   * `false` to link the whole site again.
+   */
+  homepageOnly: true,
   name: "Somabay",
   title: "Somabay — Life at the edge of the Red Sea",
   description:

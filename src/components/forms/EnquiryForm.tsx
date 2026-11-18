@@ -55,7 +55,7 @@ export function EnquiryForm({
           className,
         )}
       >
-        <span className="grid size-14 place-items-center rounded-full bg-turquoise text-white">
+        <span className="grid size-14 place-items-center rounded-full bg-deep text-white">
           <Icon name="check" className="size-7" />
         </span>
         <p className="font-serif text-heading-4">Message sent</p>
@@ -161,9 +161,9 @@ export function EnquiryForm({
                     />
                     <span
                       aria-hidden
-                      className="grid size-5 place-items-center rounded-full border border-ink/30 transition-colors group-hover:border-ink peer-checked:border-turquoise peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-turquoise peer-checked:[&>span]:scale-100"
+                      className="grid size-5 place-items-center rounded-full border border-ink/30 transition-colors group-hover:border-ink peer-checked:border-deep peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-turquoise peer-checked:[&>span]:scale-100"
                     >
-                      <span className="size-2.5 scale-0 rounded-full bg-turquoise transition-transform duration-300" />
+                      <span className="size-2.5 scale-0 rounded-full bg-deep transition-transform duration-300" />
                     </span>
                     {option}
                   </label>
@@ -195,7 +195,7 @@ export function EnquiryForm({
               />
               <span
                 aria-hidden
-                className="grid size-5 place-items-center rounded-[0.375rem] border border-ink/30 text-white transition-colors group-hover:border-ink peer-checked:border-turquoise peer-checked:bg-turquoise peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-turquoise"
+                className="grid size-5 place-items-center rounded-[0.375rem] border border-ink/30 text-white transition-colors group-hover:border-ink peer-checked:border-deep peer-checked:bg-deep peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-turquoise"
               >
                 <Icon name="check" className="size-3.5" />
               </span>

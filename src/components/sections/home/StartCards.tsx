@@ -47,11 +47,11 @@ export function StartCards({ label, options }: StartCardsProps) {
                   aria-hidden
                   className="absolute inset-0 bg-[linear-gradient(to_bottom,rgb(0_0_0/0.15)_0%,rgb(0_0_0/0)_35%,rgb(0_0_0/0.75)_100%)]"
                 />
-                {/* Hidden at rest; on hover a turquoise circle pops in at the top-right with the
+                {/* Hidden at rest; on hover a white circle pops in at the top-right with the
                     arrow sliding in from its bottom-left. */}
                 <span
                   aria-hidden
-                  className="absolute top-2 right-2 grid size-7 scale-50 place-items-center overflow-hidden rounded-full bg-turquoise text-white opacity-0 transition-[opacity,scale] duration-500 ease-out-expo group-hover:scale-100 group-hover:opacity-100 group-focus-visible:scale-100 group-focus-visible:opacity-100"
+                  className="absolute top-2 right-2 grid size-7 scale-50 place-items-center overflow-hidden rounded-full bg-white text-ink opacity-0 transition-[opacity,scale] duration-500 ease-out-expo group-hover:scale-100 group-hover:opacity-100 group-focus-visible:scale-100 group-focus-visible:opacity-100"
                 >
                   <Icon
                     name="arrow-up-right"

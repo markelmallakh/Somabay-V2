@@ -139,7 +139,7 @@ export function DetailDrawer({ items, index, onClose, onNavigate }: DetailDrawer
                       external={item.secondaryAction.external}
                       variant="outline"
                       icon={item.secondaryAction.external ? "arrow-up-right" : "chevron-right"}
-                      className="border-turquoise text-turquoise-160"
+                      className="border-deep text-turquoise-160"
                     >
                       {item.secondaryAction.label}
                     </Button>
@@ -151,7 +151,7 @@ export function DetailDrawer({ items, index, onClose, onNavigate }: DetailDrawer
                       external
                       variant="outline"
                       icon="arrow-up-right"
-                      className="border-turquoise text-turquoise-160"
+                      className="border-deep text-turquoise-160"
                     >
                       View menu
                     </Button>

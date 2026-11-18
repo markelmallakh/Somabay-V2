@@ -56,7 +56,7 @@ export function BookingBar({ targetId, name, stars, badges, price, href }: Booki
           animate={{ y: 0 }}
           exit={{ y: "110%" }}
           transition={{ duration: 0.5, ease: easeOutExpo }}
-          className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-white px-gutter py-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgb(18_58_70/0.1)] lg:hidden"
+          className="fixed inset-x-0 bottom-0 z-30 border-t border-line bg-white px-gutter py-2.5 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-[0_-8px_24px_rgb(15_30_53/0.1)] lg:hidden"
         >
           {/* Name, stars and badges on the left; the price on one line over Book now on the
               right, so the bar stays slim. */}
@@ -89,7 +89,7 @@ export function BookingBar({ targetId, name, stars, badges, price, href }: Booki
                   external
                   variant="primary"
                   icon="arrow-up-right"
-                  className="min-h-9 self-auto"
+                  className="self-auto"
                 >
                   Book now
                 </Button>

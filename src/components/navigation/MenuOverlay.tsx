@@ -169,8 +169,6 @@ export function MenuOverlay({
                     icon="chevron-right"
                     iconPosition="start"
                     onClick={onClose}
-                    // Floods turquoise (not black) on hover, in keeping with the menu's colour.
-                    className="[--wave:var(--color-turquoise)] hover:border-turquoise"
                   >
                     {data.actions.contact.label}
                   </Button>
@@ -530,7 +528,7 @@ function MobileMenu({
                   href={data.actions.contact.href}
                   variant="light"
                   onClick={onNavigate}
-                  className="w-full [--wave:var(--color-turquoise)] hover:border-turquoise"
+                  className="w-full"
                 >
                   {data.actions.contact.label}
                 </Button>

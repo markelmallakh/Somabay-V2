@@ -143,7 +143,7 @@ export function EventsSection({
                     <Link
                       href={routes.event(event.slug)}
                       aria-label={`${eventsIntro.itemCtaLabel}: ${event.title}`}
-                      className="grid size-11 shrink-0 place-items-center rounded-full bg-turquoise text-white transition-[background-color,scale] duration-500 ease-out-expo group-hover:scale-110 group-hover:bg-turquoise-160 after:absolute after:inset-0 after:rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turquoise"
+                      className="grid size-11 shrink-0 place-items-center rounded-full bg-deep text-white transition-[background-color,scale] duration-500 ease-out-expo group-hover:scale-110 group-hover:bg-turquoise-160 after:absolute after:inset-0 after:rounded-md focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-turquoise"
                     >
                       <Icon
                         name="arrow-right"

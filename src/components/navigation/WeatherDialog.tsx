@@ -111,7 +111,7 @@ export function WeatherDialog({ open, onClose, forecast, anchor }: WeatherDialog
             if (panel.current) panel.current.style.clipPath = "none";
           }}
           style={{ ...position, left, width: WIDTH }}
-          className="absolute flex max-h-[min(36rem,calc(100svh-7rem))] flex-col overflow-hidden rounded-md bg-white shadow-[0_24px_70px_rgb(18_58_70/0.25)]"
+          className="absolute flex max-h-[min(36rem,calc(100svh-7rem))] flex-col overflow-hidden rounded-md bg-white shadow-[0_24px_70px_rgb(15_30_53/0.25)]"
         >
           {/* Now, on a turquoise band. */}
           <header

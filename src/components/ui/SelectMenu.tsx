@@ -107,7 +107,7 @@ export function SelectMenu({
         className={cn(
           className,
           "h-14 pr-11 text-left data-invalid:border-alert",
-          open && "border-turquoise",
+          open && "border-deep",
         )}
       >
         {/* Keeps the line height even before a value is chosen. */}
@@ -135,7 +135,7 @@ export function SelectMenu({
             exit={{ opacity: 0, y: -4, scale: 0.98, transition: { duration: 0.18 } }}
             transition={{ duration: 0.45, ease: easeOutExpo }}
             style={{ transformOrigin: "50% 0%" }}
-            className="popover-sheet absolute inset-x-0 top-[calc(100%+0.5rem)] z-50 overflow-hidden rounded-md border border-line bg-white text-ink shadow-[0_18px_50px_rgb(18_58_70/0.18)]"
+            className="popover-sheet absolute inset-x-0 top-[calc(100%+0.5rem)] z-50 overflow-hidden rounded-md border border-line bg-white text-ink shadow-[0_18px_50px_rgb(15_30_53/0.18)]"
           >
             <p className="px-4 pt-3 pb-2.5 text-body-xs font-medium text-slate">
               {title}

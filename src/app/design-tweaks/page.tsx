@@ -60,7 +60,7 @@ export default function DesignTweaksPage() {
         </div>
 
         <Row title="Before (old radius)">
-          <span className="inline-flex min-h-[2.625rem] w-fit items-center gap-2.5 rounded-md border border-turquoise bg-turquoise px-8 text-cta-md font-medium text-white uppercase">
+          <span className="inline-flex min-h-[2.625rem] w-fit items-center gap-2.5 rounded-md border border-deep bg-deep px-8 text-cta-md font-medium text-white uppercase">
             Explore <Icon name="arrow-up-right" className="size-4" />
           </span>
           <span className="inline-flex min-h-[2.625rem] w-fit items-center gap-2.5 rounded-md border border-navy px-8 text-cta-md font-medium text-ink uppercase">
@@ -86,7 +86,7 @@ export default function DesignTweaksPage() {
               <Button
                 variant="outline"
                 icon="arrow-up-right"
-                className={`${state.className} ${state.className === "demo-full" ? "border-turquoise! text-white!" : ""}`}
+                className={`${state.className} ${state.className === "demo-full" ? "border-deep! text-white!" : ""}`}
               >
                 Explore units
               </Button>
@@ -97,7 +97,7 @@ export default function DesignTweaksPage() {
           {states.map((state) => (
             <div key={state.label}>
               <Arrow
-                className={`${state.className} ${state.className === "demo-full" ? "border-turquoise text-white" : ""}`}
+                className={`${state.className} ${state.className === "demo-full" ? "border-deep text-white" : ""}`}
               />
             </div>
           ))}
@@ -144,13 +144,13 @@ export default function DesignTweaksPage() {
           <Button variant="dark">Book now</Button>
           <button
             type="button"
-            className="wave grid size-13 place-items-center rounded-md border border-ink/15 text-ink transition-colors duration-500 hover:border-turquoise hover:text-white"
+            className="grid size-13 place-items-center rounded-full border border-ink/15 text-ink transition-colors duration-500 hover:border-aqua hover:bg-aqua hover:text-white"
           >
             <Icon name="chevron-left" className="size-5" />
           </button>
           <button
             type="button"
-            className="wave grid size-13 place-items-center rounded-md border border-ink/15 text-ink transition-colors duration-500 hover:border-turquoise hover:text-white"
+            className="grid size-13 place-items-center rounded-full border border-ink/15 text-ink transition-colors duration-500 hover:border-aqua hover:bg-aqua hover:text-white"
           >
             <Icon name="chevron-right" className="size-5" />
           </button>

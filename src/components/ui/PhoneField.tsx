@@ -142,9 +142,9 @@ export function PhoneField({
           className={cn(
             "flex items-stretch rounded-md border border-ink/15 bg-white text-ink",
             "transition-[border-color,box-shadow] duration-500 ease-out-expo hover:border-ink/35",
-            "focus-within:border-turquoise-160/55 focus-within:shadow-[0_6px_16px_-12px_rgb(0_107_112/0.18)]",
+            "focus-within:border-turquoise-160/55 focus-within:shadow-[0_6px_16px_-12px_rgb(27_49_80/0.18)]",
             "data-invalid:border-alert",
-            open && "border-turquoise-160/55 shadow-[0_6px_16px_-12px_rgb(0_107_112/0.18)]",
+            open && "border-turquoise-160/55 shadow-[0_6px_16px_-12px_rgb(27_49_80/0.18)]",
           )}
         >
           <button
@@ -217,7 +217,7 @@ export function PhoneField({
               transition={{ duration: 0.45, ease: easeOutExpo }}
               style={{ transformOrigin: "50% 0%" }}
               onKeyDown={onListKey}
-              className="popover-sheet absolute top-[calc(100%+0.5rem)] left-0 z-50 w-[max(100%,20rem)] overflow-hidden rounded-md border border-line bg-white text-ink shadow-[0_18px_50px_rgb(18_58_70/0.18)]"
+              className="popover-sheet absolute top-[calc(100%+0.5rem)] left-0 z-50 w-[max(100%,20rem)] overflow-hidden rounded-md border border-line bg-white text-ink shadow-[0_18px_50px_rgb(15_30_53/0.18)]"
             >
               <p className="px-4 pt-3 pb-2.5 text-body-xs font-medium text-slate">Country code</p>
               <div className="flex items-center gap-2 border-t border-line px-4">

@@ -167,7 +167,7 @@ function LeaderDrawer({
             <button
               type="button"
               onClick={onClose}
-              className="wave absolute top-5 right-5 z-20 grid size-12 place-items-center rounded-md bg-white text-ink shadow-[0_8px_24px_rgb(18_58_70/0.12)] transition-colors duration-500 hover:text-white md:hidden"
+              className="wave absolute top-5 right-5 z-20 grid size-12 place-items-center rounded-md bg-white text-ink shadow-[0_8px_24px_rgb(15_30_53/0.12)] transition-colors duration-500 hover:text-white md:hidden"
               aria-label="Close"
             >
               <Icon name="close" className="size-5" />

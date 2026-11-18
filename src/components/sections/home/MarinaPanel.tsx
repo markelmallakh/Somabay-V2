@@ -118,7 +118,7 @@ export function MarinaPanel({
     <section
       ref={scope}
       aria-labelledby="marina-title"
-      className="relative h-[450svh] bg-white motion-reduce:h-auto"
+      className="relative h-[450svh] bg-sand-100 motion-reduce:h-auto"
     >
       <div className="sticky top-0 h-svh overflow-hidden motion-reduce:static motion-reduce:h-auto">
         {/* The film that opens from nothing between the lines to the full screen. */}

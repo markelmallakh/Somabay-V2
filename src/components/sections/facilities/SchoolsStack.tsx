@@ -163,7 +163,7 @@ export function SchoolsStack() {
                   variant={school.brand.dark ? "outline-light" : "outline"}
                   size="md"
                   icon="arrow-up-right"
-                  className={school.brand.dark ? undefined : "border-turquoise text-turquoise"}
+                  className={school.brand.dark ? undefined : "border-deep text-turquoise"}
                 >
                   {school.website.label}
                 </Button>

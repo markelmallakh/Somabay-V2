@@ -47,7 +47,7 @@ export function CoursesStack() {
         >
           <article
             data-course-inner
-            className="relative grid origin-top overflow-hidden rounded-md bg-white shadow-[0_-6px_20px_-12px_rgb(18_58_70/0.12),0_10px_28px_-18px_rgb(18_58_70/0.12)] [backface-visibility:hidden] lg:h-[min(40rem,calc(100svh-var(--header-height)-12rem))] lg:grid-cols-12 lg:will-change-[transform,filter]"
+            className="relative grid origin-top overflow-hidden rounded-md bg-white shadow-[0_-6px_20px_-12px_rgb(15_30_53/0.12),0_10px_28px_-18px_rgb(15_30_53/0.12)] [backface-visibility:hidden] lg:h-[min(40rem,calc(100svh-var(--header-height)-12rem))] lg:grid-cols-12 lg:will-change-[transform,filter]"
           >
             <span
               aria-hidden
@@ -94,7 +94,7 @@ export function CoursesStack() {
                   variant="outline"
                   size="sm"
                   icon="arrow-up-right"
-                  className="border-turquoise text-turquoise"
+                  className="border-deep text-turquoise"
                   aria-label={`Know more about the ${course.title} on the Somabay Golf website`}
                 >
                   Know more

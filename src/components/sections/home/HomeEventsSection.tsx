@@ -125,7 +125,7 @@ export function HomeEventsSection() {
                   <span
                     aria-hidden
                     className={cn(
-                      "absolute inset-x-0 bottom-0 h-0.5 origin-left bg-turquoise transition-transform duration-700 ease-out-expo",
+                      "absolute inset-x-0 bottom-0 h-0.5 origin-left bg-deep transition-transform duration-700 ease-out-expo",
                       selected ? "scale-x-100" : "scale-x-0",
                     )}
                   />
@@ -196,7 +196,7 @@ export function HomeEventsSection() {
         </AnimatePresence>
 
         <div className="flex justify-center">
-          <Button href={routes.events} variant="primary" icon="arrow-up-right">
+          <Button href={routes.events} variant="outline" icon={null}>
             Explore all events
           </Button>
         </div>

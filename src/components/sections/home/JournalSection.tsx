@@ -17,7 +17,7 @@ const date = new Intl.DateTimeFormat("en-GB", {
   timeZone: "UTC",
 });
 
-/** Figma "Section / Journal" (447:11669): three latest stories in a row. */
+/** Journal: a centred heading, the three latest stories in a row, and "Read more" under them. */
 export function JournalSection() {
   return (
     <section
@@ -26,21 +26,12 @@ export function JournalSection() {
       className="bg-sand-100 py-section text-ink"
     >
       <Container className="flex flex-col gap-8 sm:gap-12">
-        <Reveal className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-          <div className="flex flex-col gap-4">
-            <Eyebrow>{journalIntro.eyebrow}</Eyebrow>
-            <h2 id="journal-title" className="text-heading-2">
-              {journalIntro.title}
-            </h2>
-          </div>
-          <Button
-            href={journalIntro.cta.href}
-            variant="outline"
-            icon="arrow-up-right"
-            className="hidden md:inline-flex"
-          >
-            {journalIntro.cta.label}
-          </Button>
+        {/* The eyebrow and title centred over the stories. */}
+        <Reveal className="flex flex-col items-center gap-4 text-center">
+          <Eyebrow className="mx-auto">{journalIntro.eyebrow}</Eyebrow>
+          <h2 id="journal-title" className="text-heading-2">
+            {journalIntro.title}
+          </h2>
         </Reveal>
 
         {/* Phones: a swipe row with the next story peeking in, the button after it. */}
@@ -79,12 +70,8 @@ export function JournalSection() {
             </RevealItem>
           ))}
         </RevealGroup>
-        <Button
-          href={journalIntro.cta.href}
-          variant="outline"
-          icon="arrow-up-right"
-          className="self-center md:hidden"
-        >
+        {/* A plain outlined pill under the stories, with no arrow chip. */}
+        <Button href={journalIntro.cta.href} variant="outline" icon={null} className="self-center">
           {journalIntro.cta.label}
         </Button>
       </Container>

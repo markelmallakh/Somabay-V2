@@ -2,14 +2,14 @@
   "version": "0.0.1",
   "configurations": [
     {
-      "name": "somabay-dev",
+      "name": "somabayv2",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev"],
       "port": 3000,
       "autoPort": true
     },
     {
-      "name": "somabay-pages-local",
+      "name": "somabayv2-pages-local",
       "runtimeExecutable": "npx",
       "runtimeArgs": ["-y", "serve@14.2.4", ".pages-preview", "-l", "4173", "--no-clipboard"],
       "port": 4173

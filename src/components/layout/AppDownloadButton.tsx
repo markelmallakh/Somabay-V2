@@ -34,7 +34,7 @@ export function AppDownloadButton({ className }: { className?: string }) {
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "inline-flex min-h-11 items-center gap-2.5 rounded-md bg-turquoise px-4 text-white transition-colors duration-500 hover:bg-lagoon active:bg-lagoon",
+        "inline-flex min-h-11 items-center gap-2.5 rounded-full bg-navy px-5 text-white transition-colors duration-500 hover:bg-aqua active:bg-aqua",
         className,
       )}
     >

@@ -52,7 +52,7 @@ export function GolfLeisureSection() {
           external
           variant="outline"
           icon="arrow-up-right"
-          className="border-turquoise text-turquoise"
+          className="border-deep text-turquoise"
         >
           {golfLeisure.aside.label}
         </Button>
@@ -102,7 +102,7 @@ export function AcademySection() {
                 variant="outline"
                 size="sm"
                 icon="arrow-up-right"
-                className="mt-8 border-turquoise text-turquoise"
+                className="mt-8 border-deep text-turquoise"
                 aria-label="Know more about the Golf Academy on the Somabay Golf website"
               >
                 Know more

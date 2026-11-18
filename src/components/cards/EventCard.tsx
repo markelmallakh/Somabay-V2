@@ -13,7 +13,7 @@ export function DateBadge({ event, className }: { event: EventItem; className?: 
   return (
     <span
       className={cn(
-        "flex min-w-14 flex-col items-center rounded-md bg-white/95 px-2.5 py-1.5 text-ink shadow-[0_8px_24px_rgb(18_58_70/0.14)] backdrop-blur-sm sm:min-w-22 sm:px-4 sm:py-3",
+        "flex min-w-14 flex-col items-center rounded-md bg-white/95 px-2.5 py-1.5 text-ink shadow-[0_8px_24px_rgb(15_30_53/0.14)] backdrop-blur-sm sm:min-w-22 sm:px-4 sm:py-3",
         className,
       )}
     >

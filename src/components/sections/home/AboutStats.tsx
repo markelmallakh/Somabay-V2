@@ -10,7 +10,7 @@ type AboutStatsProps = {
   className?: string;
 };
 
-/** Key figures set inline in white on the dune band (counting up on arrival), with the outlined story CTA beneath. */
+/** Key figures set inline in white on the dune band (counting up on arrival), with the white story CTA beneath. */
 export function AboutStats({ stats, cta, className }: AboutStatsProps) {
   return (
     <RevealGroup className={cn("flex flex-col gap-8 text-white sm:gap-12 lg:gap-16", className)}>
@@ -32,7 +32,7 @@ export function AboutStats({ stats, cta, className }: AboutStatsProps) {
         ))}
       </dl>
       <RevealItem className="flex justify-center">
-        <Button href={cta.href} variant="outline-light" icon="arrow-up-right">
+        <Button href={cta.href} variant="light" icon="arrow-up-right">
           {cta.label}
         </Button>
       </RevealItem>

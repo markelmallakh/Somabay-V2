@@ -57,7 +57,7 @@ export function NeighborhoodInterest({ name }: NeighborhoodInterestProps) {
 
         {/* The invitation and the form on one white panel, laid over the photo's right side. */}
         <Reveal delay={0.1} className="relative z-10 lg:col-span-6 lg:col-start-7 lg:row-start-1">
-          <div className="flex flex-col rounded-b-md bg-white p-5 sm:p-10 lg:rounded-md lg:p-12 lg:shadow-[0_18px_48px_-28px_rgb(18_58_70/0.2)]">
+          <div className="flex flex-col rounded-b-md bg-white p-5 sm:p-10 lg:rounded-md lg:p-12 lg:shadow-[0_18px_48px_-28px_rgb(15_30_53/0.2)]">
             <Eyebrow>Register your interest</Eyebrow>
             {/* DRAFT COPY: the title and paragraph were written for this form, not from Figma. */}
             <SplitHeading id="interest-title" className="mt-2 text-heading-3">

@@ -126,7 +126,7 @@ export function UnitsFinder({ units, hrefs, neighborhoods }: UnitsFinderProps) {
             <FiltersIcon />
             Filters
             {activeCount > 0 ? (
-              <span className="grid size-5 place-items-center rounded-full bg-turquoise text-body-2xs font-semibold text-white tabular-nums">
+              <span className="grid size-5 place-items-center rounded-full bg-deep text-body-2xs font-semibold text-white tabular-nums">
                 {activeCount}
               </span>
             ) : null}
@@ -148,7 +148,7 @@ export function UnitsFinder({ units, hrefs, neighborhoods }: UnitsFinderProps) {
               <FiltersIcon />
               Filters
               {activeCount > 0 ? (
-                <span className="grid size-5 place-items-center rounded-full bg-turquoise text-body-2xs font-semibold text-white tabular-nums">
+                <span className="grid size-5 place-items-center rounded-full bg-deep text-body-2xs font-semibold text-white tabular-nums">
                   {activeCount}
                 </span>
               ) : null}

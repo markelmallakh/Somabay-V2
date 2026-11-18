@@ -16,7 +16,7 @@ const CELL = "rounded-md sm:h-[14.5rem]";
 /** A rounded pill for one way in: a small solid icon and the number, address or link. */
 function ActionPill({ action }: { action: ContactLine }) {
   const className =
-    "inline-flex min-h-10 max-w-full items-center sm:min-h-8 gap-1.5 rounded-full border border-ink/15 px-3 text-body-xs text-ink transition-[border-color,color] duration-500 ease-out-expo hover:border-turquoise hover:text-turquoise-160";
+    "inline-flex min-h-10 max-w-full items-center sm:min-h-8 gap-1.5 rounded-full border border-ink/15 px-3 text-body-xs text-ink transition-[border-color,color] duration-500 ease-out-expo hover:border-deep hover:text-turquoise-160";
   const content = (
     <>
       <Icon name={action.icon} className="size-3 shrink-0 text-turquoise" />
@@ -129,7 +129,7 @@ export function ContactDirectory({ groups }: { groups: ContactGroup[] }) {
           {groups.map((group) => (
             <div key={group.id} id={groupId(group.id)} className="flex flex-col gap-3">
               <h3 className="flex items-center gap-2.5 font-serif text-heading-5">
-                <span aria-hidden className="size-2 rounded-full bg-turquoise" />
+                <span aria-hidden className="size-2 rounded-full bg-deep" />
                 {group.title}
               </h3>
               <div className="grid gap-1.5 sm:grid-cols-2 lg:grid-cols-3">
@@ -193,7 +193,7 @@ export function ContactDirectory({ groups }: { groups: ContactGroup[] }) {
                   <span
                     aria-hidden
                     className={cn(
-                      "absolute inset-x-0 -top-px h-0.5 origin-left bg-turquoise transition-transform duration-500 ease-out-expo",
+                      "absolute inset-x-0 -top-px h-0.5 origin-left bg-deep transition-transform duration-500 ease-out-expo",
                       on ? "scale-x-100" : "scale-x-0",
                     )}
                   />

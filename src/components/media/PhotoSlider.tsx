@@ -77,7 +77,7 @@ export function PhotoSlider({ images, label, interval = 6 }: PhotoSliderProps) {
                   aria-hidden
                   className={cn(
                     "pointer-events-none absolute -inset-[3px] rounded-[5px] border-[1.5px] transition-colors duration-500",
-                    on ? (onPhoto ? "border-white" : "border-turquoise") : "border-transparent",
+                    on ? (onPhoto ? "border-white" : "border-deep") : "border-transparent",
                   )}
                 />
               </span>

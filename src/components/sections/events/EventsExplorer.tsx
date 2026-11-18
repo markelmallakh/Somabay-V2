@@ -133,10 +133,8 @@ export function EventsExplorer({
                 <span
                   aria-hidden
                   className={cn(
-                    "absolute inset-x-0 -bottom-px h-0.5 origin-left bg-turquoise transition-transform duration-700 ease-out-expo",
-                    on
-                      ? "scale-x-100"
-                      : "scale-x-0 group-hover:scale-x-100 group-hover:bg-turquoise/40",
+                    "absolute inset-x-0 -bottom-px h-0.5 origin-left bg-deep transition-transform duration-700 ease-out-expo",
+                    on ? "scale-x-100" : "scale-x-0 group-hover:scale-x-100 group-hover:bg-deep/40",
                   )}
                 />
               </button>

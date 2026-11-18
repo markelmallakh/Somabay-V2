@@ -19,9 +19,9 @@ export const accentClasses: Record<
   { dot: string; rule: string; wash: string; tint: string; ink: string }
 > = {
   turquoise: {
-    dot: "bg-turquoise",
-    rule: "bg-turquoise",
-    wash: "bg-turquoise/8",
+    dot: "bg-deep",
+    rule: "bg-deep",
+    wash: "bg-deep/8",
     tint: "bg-turquoise-10",
     ink: "text-turquoise-160",
   },

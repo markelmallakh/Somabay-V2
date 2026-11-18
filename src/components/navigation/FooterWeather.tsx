@@ -49,7 +49,7 @@ export function FooterWeather({
             ? `flex min-h-11 w-full items-center justify-center gap-2 text-body-xs transition-opacity hover:opacity-75 ${tone === "dark" ? "text-white" : "text-ink"}`
             : tone === "dark"
               ? "inline-flex min-h-10 items-center gap-2 rounded-md border border-white/25 px-3 py-1.5 text-body-xs text-white transition-colors hover:border-white/60"
-              : "inline-flex min-h-10 items-center gap-2 rounded-md border border-line px-3 py-1.5 text-body-xs text-ink transition-colors hover:border-turquoise/60"
+              : "inline-flex min-h-10 items-center gap-2 rounded-md border border-line px-3 py-1.5 text-body-xs text-ink transition-colors hover:border-deep/60"
         }
       >
         <Icon

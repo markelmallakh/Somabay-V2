@@ -149,7 +149,7 @@ export function RoomsFinder({
                       variant="outline"
                       size="sm"
                       aria-label={`Book the ${room.name}`}
-                      className="min-h-8 self-auto border-turquoise px-3 text-[0.6875rem] text-turquoise-160 sm:min-h-9 sm:px-5 sm:text-body-xs"
+                      className="self-auto text-turquoise-160"
                     >
                       Book now
                     </Button>

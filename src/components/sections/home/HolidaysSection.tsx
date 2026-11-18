@@ -1,9 +1,5 @@
 import { holidaysIntro } from "@/content/home";
 import { hotelHref, hotelPrice, hotels, hotelThemes } from "@/content/hotels";
-import { Container } from "@/components/layout/Container";
-import { HeadingRow, PhoneEndCta } from "@/components/layout/HeadingRow";
-import { Icon } from "@/components/ui/Icon";
-import { SmartLink } from "@/components/ui/SmartLink";
 import { HotelsShowcase } from "./HotelsShowcase";
 
 const themeLabel = new Map(hotelThemes.map((theme) => [theme.value, theme.label]));
@@ -11,20 +7,8 @@ const themeLabel = new Map(hotelThemes.map((theme) => [theme.value, theme.label]
 /** Every stay, the hotels and Stayr (home rentals). */
 const showcased = hotels;
 
-/** Figma "Section / Hotels": intro, then the hotel switcher that steps through on scroll. */
+/** Book Stay: a framed spotlight of one stay at a time, with a picker for every stay. */
 export function HolidaysSection() {
-  const allHotels = (
-    <SmartLink
-      href={holidaysIntro.cta.href}
-      className="group inline-flex w-fit items-center gap-2.5 text-body-xs font-semibold tracking-label text-turquoise uppercase transition-colors duration-500 hover:text-turquoise-160"
-    >
-      {holidaysIntro.cta.label}
-      <Icon
-        name="arrow-right"
-        className="size-4 transition-transform duration-700 ease-out-expo group-hover:translate-x-1"
-      />
-    </SmartLink>
-  );
   return (
     <section
       aria-labelledby="holidays-title"
@@ -51,19 +35,11 @@ export function HolidaysSection() {
             .slice(0, 2),
         }))}
         ctaLabel={holidaysIntro.itemCtaLabel}
-        outro={<PhoneEndCta className="mt-0">{allHotels}</PhoneEndCta>}
-        intro={
-          <Container>
-            {/* Title on the left; the line and a turquoise "View all stays" link on the right. */}
-            <HeadingRow
-              id="holidays-title"
-              eyebrow={holidaysIntro.eyebrow}
-              title={holidaysIntro.title}
-              description={holidaysIntro.description}
-              aside={allHotels}
-            />
-          </Container>
-        }
+        titleId="holidays-title"
+        eyebrow={holidaysIntro.eyebrow}
+        title={holidaysIntro.title}
+        description={holidaysIntro.description}
+        cta={holidaysIntro.cta}
       />
     </section>
   );

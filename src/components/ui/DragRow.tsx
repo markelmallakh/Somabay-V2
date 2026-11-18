@@ -85,7 +85,7 @@ export function DragRow({
             className={cn("relative h-0.5 flex-1", tone === "dark" ? "bg-white/20" : "bg-line")}
           >
             <span
-              className="absolute inset-y-0 bg-turquoise transition-[left,width] duration-500 ease-out-expo"
+              className="absolute inset-y-0 bg-deep transition-[left,width] duration-500 ease-out-expo"
               style={{ left: `${view.start * 100}%`, width: `${view.size * 100}%` }}
             />
           </div>

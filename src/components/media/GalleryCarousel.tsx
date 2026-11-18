@@ -146,7 +146,7 @@ export function GalleryCarousel({
           )}
         >
           <span
-            className="absolute inset-y-0 bg-turquoise transition-[left] duration-700 ease-out-expo"
+            className="absolute inset-y-0 bg-deep transition-[left] duration-700 ease-out-expo"
             style={{ left: `${(active / count) * 100}%`, width: `${100 / count}%` }}
           />
         </div>

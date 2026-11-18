@@ -10,8 +10,8 @@ export const control = cn(
   "peer block w-full rounded-md border border-ink/15 bg-white px-4 pt-6 pb-2 text-body text-ink outline-none",
   "transition-[border-color,box-shadow,background-color] duration-500 ease-out-expo hover:border-ink/35",
   // Focus: a quiet deep-teal edge and a soft, low shadow that settles under the box (no glow).
-  "focus:border-turquoise-160/55 focus:shadow-[0_6px_16px_-12px_rgb(0_107_112/0.18)]",
-  "aria-expanded:border-turquoise-160/55 aria-expanded:shadow-[0_6px_16px_-12px_rgb(0_107_112/0.18)]",
+  "focus:border-turquoise-160/55 focus:shadow-[0_6px_16px_-12px_rgb(27_49_80/0.18)]",
+  "aria-expanded:border-turquoise-160/55 aria-expanded:shadow-[0_6px_16px_-12px_rgb(27_49_80/0.18)]",
   "aria-invalid:border-alert",
 );
 

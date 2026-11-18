@@ -108,7 +108,7 @@ export function DiningFinder({ venues, categories }: DiningFinderProps) {
           ) : null}
           <span
             aria-hidden
-            className="absolute inset-x-0 -bottom-px h-0.5 origin-left scale-x-0 bg-turquoise transition-transform duration-700 ease-out-expo group-focus-within/search:scale-x-100"
+            className="absolute inset-x-0 -bottom-px h-0.5 origin-left scale-x-0 bg-deep transition-transform duration-700 ease-out-expo group-focus-within/search:scale-x-100"
           />
         </label>
       </div>

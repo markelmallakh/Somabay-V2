@@ -63,10 +63,10 @@ export function CarouselArrows({
 }: CarouselArrowsProps) {
   if (!canBack && !canForward) return null;
   const button = cn(
-    "wave grid size-13 place-items-center rounded-md border transition-[border-color,color,opacity] duration-500 ease-out-expo disabled:pointer-events-none disabled:opacity-35",
+    "grid size-13 place-items-center rounded-full border transition-[background-color,border-color,color,opacity] duration-500 ease-out-expo disabled:pointer-events-none disabled:opacity-35",
     tone === "light"
-      ? "border-ink/15 text-ink hover:border-turquoise hover:text-white"
-      : "border-white/40 text-white [--wave:#fff] hover:border-white hover:text-ink",
+      ? "border-ink/15 text-ink hover:border-aqua hover:bg-aqua hover:text-white"
+      : "border-white/40 text-white hover:border-aqua hover:bg-aqua hover:text-white",
   );
   return (
     // Phones swipe (the next card peeks in), so the arrows only show from `md`.

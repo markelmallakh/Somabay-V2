@@ -165,7 +165,7 @@ export function DateField({ id, name, label, required, error, className }: DateF
               exit={{ opacity: 0, y: -4, scale: 0.98, transition: { duration: 0.18 } }}
               transition={{ duration: 0.45, ease: easeOutExpo }}
               style={{ transformOrigin: "100% 0%" }}
-              className="popover-sheet absolute top-[calc(100%+0.5rem)] right-0 z-50 w-[19.5rem] rounded-md border border-line bg-white p-3 text-ink shadow-[0_18px_50px_rgb(18_58_70/0.18)]"
+              className="popover-sheet absolute top-[calc(100%+0.5rem)] right-0 z-50 w-[19.5rem] rounded-md border border-line bg-white p-3 text-ink shadow-[0_18px_50px_rgb(15_30_53/0.18)]"
             >
               {/* Month, between previous and next. */}
               <div className="flex items-center justify-between">
@@ -224,7 +224,7 @@ export function DateField({ id, name, label, required, error, className }: DateF
                         "hover:bg-turquoise-5 focus-visible:ring-2 focus-visible:ring-turquoise/50",
                         "disabled:pointer-events-none disabled:text-ink/25 disabled:line-through",
                         outside && !selected && "text-ink/35",
-                        selected && "bg-turquoise text-white hover:bg-turquoise",
+                        selected && "bg-deep text-white hover:bg-deep",
                       )}
                     >
                       {day.getDate()}
@@ -234,7 +234,7 @@ export function DateField({ id, name, label, required, error, className }: DateF
                           aria-hidden
                           className={cn(
                             "absolute bottom-1 left-1/2 size-[3px] -translate-x-1/2 rounded-full",
-                            selected ? "bg-white" : "bg-turquoise",
+                            selected ? "bg-white" : "bg-deep",
                           )}
                         />
                       ) : null}
@@ -250,7 +250,7 @@ export function DateField({ id, name, label, required, error, className }: DateF
                     setMonth(new Date(today.getFullYear(), today.getMonth(), 1));
                     choose(today);
                   }}
-                  className="rounded-md border border-line px-3 py-1.5 text-body-xs font-medium transition-colors hover:border-turquoise hover:text-turquoise-160"
+                  className="rounded-md border border-line px-3 py-1.5 text-body-xs font-medium transition-colors hover:border-deep hover:text-turquoise-160"
                 >
                   Today
                 </button>

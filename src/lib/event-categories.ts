@@ -26,7 +26,7 @@ export const categoryColor: Record<string, { dot: string; tag: string }> = {
 };
 
 const fallbackColor = {
-  dot: "bg-turquoise",
-  tag: "border-turquoise/30 bg-turquoise/8 text-turquoise-160",
+  dot: "bg-deep",
+  tag: "border-deep/30 bg-deep/8 text-turquoise-160",
 };
 export const colorOf = (value: string) => categoryColor[value] ?? fallbackColor;

@@ -25,7 +25,7 @@ export function ContactHero() {
           <ResponsiveImage asset={contactHero.image} sizes="100vw" fill priority />
         </div>
       </Parallax>
-      <div aria-hidden className="absolute inset-0 -z-10 bg-[rgb(10_30_38/0.5)]" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-[rgb(8_46_48/0.5)]" />
       <Container className="flex justify-center">
         <Reveal distance={32} className="w-full max-w-[52rem]">
           {/* The compact heading. */}

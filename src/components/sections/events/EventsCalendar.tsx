@@ -163,7 +163,7 @@ export function EventsCalendar({
     // listed alongside on large screens.
     <div
       ref={panel}
-      className="relative overflow-hidden rounded-md bg-white shadow-[0_20px_60px_-40px_rgb(18_58_70/0.35)]"
+      className="relative overflow-hidden rounded-md bg-white shadow-[0_20px_60px_-40px_rgb(15_30_53/0.35)]"
     >
       <div className="grid lg:grid-cols-[minmax(0,1fr)_19rem]">
         <div className="p-4 sm:p-6 md:p-8">
@@ -238,7 +238,7 @@ export function EventsCalendar({
                       // Above the phone day button, which it lets taps through to.
                       "pointer-events-none relative z-[1] grid size-7 place-items-center rounded-full text-body-sm tabular-nums",
                       !inMonth && "text-mist/60",
-                      isToday && "bg-turquoise font-semibold text-white",
+                      isToday && "bg-deep font-semibold text-white",
                     )}
                   >
                     {date.getUTCDate()}
@@ -411,7 +411,7 @@ export function EventsCalendar({
               width: POP_WIDTH,
               transformOrigin: `${anchor.originX}px ${anchor.originY}px`,
             }}
-            className="absolute z-20 overflow-hidden rounded-md bg-white shadow-[0_18px_48px_-12px_rgb(18_58_70/0.35)] ring-1 ring-line"
+            className="absolute z-20 overflow-hidden rounded-md bg-white shadow-[0_18px_48px_-12px_rgb(15_30_53/0.35)] ring-1 ring-line"
           >
             {preview(selected)}
           </m.div>

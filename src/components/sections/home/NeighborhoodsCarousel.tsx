@@ -124,7 +124,7 @@ export function NeighborhoodsCarousel({
         <div
           role="tablist"
           aria-label="Neighborhood availability"
-          className="flex gap-8 border-b border-line"
+          className="flex w-fit gap-1 rounded-full bg-sand-100 p-1"
         >
           {ORDER.map((key) => {
             const count = neighborhoods.filter((item) => item.status === key).length;
@@ -138,20 +138,23 @@ export function NeighborhoodsCarousel({
                 aria-selected={selected}
                 aria-controls={PANEL_ID}
                 onClick={() => change(key)}
+                // A light segmented control: the chosen chip is a white pill lifted on the pale track.
                 className={cn(
-                  "relative -mb-px pb-4 text-body-sm font-bold whitespace-nowrap uppercase transition-colors duration-500",
-                  selected ? "text-ink" : "text-slate hover:text-ink",
+                  "inline-flex items-center gap-2 rounded-full py-1.5 pr-1.5 pl-4 text-body-xs font-semibold tracking-[0.06em] whitespace-nowrap uppercase transition-[background-color,color,box-shadow] duration-500",
+                  selected
+                    ? "bg-white text-ink shadow-[0_2px_8px_-2px_rgb(29_31_34/0.15)]"
+                    : "text-slate hover:text-ink",
                 )}
               >
                 {tabLabels[key]}
-                <span className="ml-2">({count})</span>
                 <span
-                  aria-hidden
                   className={cn(
-                    "absolute inset-x-0 bottom-0 h-0.5 origin-left bg-turquoise transition-transform duration-700 ease-out-expo",
-                    selected ? "scale-x-100" : "scale-x-0",
+                    "grid h-6 min-w-6 place-items-center rounded-full px-1.5 text-[0.6875rem] tabular-nums transition-colors duration-500",
+                    selected ? "bg-frost-soft text-ink" : "bg-white/70 text-slate",
                   )}
-                />
+                >
+                  {count}
+                </span>
               </button>
             );
           })}
@@ -192,7 +195,7 @@ export function NeighborhoodsCarousel({
                   title={item.name}
                   summary={item.summary}
                   action={ctaLabel}
-                  className="aspect-[4/5] shadow-[0_18px_36px_-22px_rgb(18_58_70/0.45)] sm:aspect-[400/520]"
+                  className="aspect-[4/5] sm:aspect-[400/520]"
                 />
               </li>
             ))}
@@ -202,9 +205,9 @@ export function NeighborhoodsCarousel({
 
       {/* Phones: no rail or arrows; the peeking cards show the row scrolls. */}
       <Container className="hidden items-center gap-8 md:flex">
-        <div className="relative h-0.5 flex-1 bg-line" aria-hidden>
+        <div className="relative h-0.5 flex-1 overflow-hidden rounded-full bg-line" aria-hidden>
           <span
-            className="absolute inset-y-0 bg-turquoise transition-[width] duration-700 ease-out-expo"
+            className="absolute inset-y-0 rounded-full bg-deep transition-[width] duration-700 ease-out-expo"
             style={{ left: `${progress.start * 100}%`, width: `${progress.size * 100}%` }}
           />
         </div>
@@ -212,7 +215,7 @@ export function NeighborhoodsCarousel({
           <button
             type="button"
             onClick={() => step(-1)}
-            className="wave grid size-12 place-items-center rounded-md border border-ink/15 text-ink transition-colors duration-500 hover:border-turquoise hover:text-white"
+            className="grid size-12 place-items-center rounded-full border border-ink/15 text-ink transition-colors duration-500 hover:border-aqua hover:bg-aqua hover:text-white"
           >
             <span className="sr-only">Previous neighborhoods</span>
             <Icon name="arrow-right" className="size-5 rotate-180" />
@@ -220,7 +223,7 @@ export function NeighborhoodsCarousel({
           <button
             type="button"
             onClick={() => step(1)}
-            className="wave grid size-12 place-items-center rounded-md border border-ink/15 text-ink transition-colors duration-500 hover:border-turquoise hover:text-white"
+            className="grid size-12 place-items-center rounded-full border border-ink/15 text-ink transition-colors duration-500 hover:border-aqua hover:bg-aqua hover:text-white"
           >
             <span className="sr-only">Next neighborhoods</span>
             <Icon name="arrow-right" className="size-5" />

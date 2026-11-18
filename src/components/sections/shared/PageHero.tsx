@@ -137,7 +137,7 @@ export function PageHero(props: PageHeroProps) {
       // Holds in place while the page's content scrolls up over it (see SiteMotion).
       data-sticky-hero=""
       className={cn(
-        "relative isolate flex overflow-hidden bg-abyss text-white",
+        "frame-panel relative isolate flex overflow-hidden bg-abyss text-white",
         height === "screen" ? "h-svh min-h-[40rem]" : "h-[60svh] max-h-[42rem] min-h-[30rem]",
       )}
     >

@@ -53,7 +53,7 @@ export function FilterDropdown({
         aria-expanded={open}
         aria-controls={panelId}
         onClick={() => setOpen((current) => !current)}
-        className="flex min-h-11 min-w-48 items-center justify-between gap-6 rounded-md border border-ink/15 bg-white px-4 text-[0.9375rem] transition-colors duration-500 hover:border-turquoise"
+        className="flex min-h-11 min-w-48 items-center justify-between gap-6 rounded-md border border-ink/15 bg-white px-4 text-[0.9375rem] transition-colors duration-500 hover:border-deep"
       >
         <span>
           {label}
@@ -76,7 +76,7 @@ export function FilterDropdown({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -6 }}
             transition={{ duration: 0.25 }}
-            className="popover-sheet absolute top-full left-0 z-20 mt-2 w-72 rounded-md bg-white p-5 shadow-[0_16px_48px_rgb(18_58_70/0.16)]"
+            className="popover-sheet absolute top-full left-0 z-20 mt-2 w-72 rounded-md bg-white p-5 shadow-[0_16px_48px_rgb(15_30_53/0.16)]"
           >
             <fieldset>
               <legend className="sr-only">{label}</legend>

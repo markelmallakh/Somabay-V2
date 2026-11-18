@@ -1,7 +1,7 @@
 import { Icon } from "./Icon";
 
 const stepper =
-  "wave grid size-12 place-items-center rounded-md bg-white text-ink shadow-[0_8px_24px_rgb(0_0_0/0.18)] transition-colors duration-500 hover:text-white";
+  "grid size-12 place-items-center rounded-full bg-white text-ink shadow-[0_8px_24px_rgb(0_0_0/0.18)] transition-colors duration-500 hover:text-white";
 
 /**
  * Previous / next for a drawer that steps through a list, stacked just outside the drawer's

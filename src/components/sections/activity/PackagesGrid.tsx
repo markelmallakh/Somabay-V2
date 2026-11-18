@@ -123,7 +123,7 @@ export function PackagesGrid({
                 {external ? (
                   <span
                     aria-hidden
-                    className="absolute top-3 right-3 grid size-7 place-items-center rounded-full bg-turquoise text-white sm:hidden"
+                    className="absolute top-3 right-3 grid size-7 place-items-center rounded-full bg-deep text-white sm:hidden"
                   >
                     <Icon name="arrow-up-right" className="size-3.5" />
                   </span>
@@ -155,7 +155,7 @@ export function PackagesGrid({
                     {external ? (
                       <span
                         aria-hidden
-                        className="grid size-8 shrink-0 place-items-center rounded-full bg-turquoise text-white"
+                        className="grid size-8 shrink-0 place-items-center rounded-full bg-deep text-white"
                       >
                         <Icon name="arrow-up-right" className="size-4" />
                       </span>

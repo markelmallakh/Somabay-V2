@@ -154,7 +154,7 @@ async function UnitContent({ params }: { params: PageProps<"/resale/[slug]">["pa
             </div>
 
             <aside className="lg:col-span-4 lg:col-start-9">
-              <div className="flex flex-col gap-5 rounded-md border border-ink/8 bg-white p-5 shadow-[0_18px_48px_-28px_rgb(18_58_70/0.2)] sm:p-6 md:p-8 lg:sticky lg:top-[calc(var(--header-height)+2rem)]">
+              <div className="flex flex-col gap-5 rounded-md border border-ink/8 bg-white p-5 shadow-[0_18px_48px_-28px_rgb(15_30_53/0.2)] sm:p-6 md:p-8 lg:sticky lg:top-[calc(var(--header-height)+2rem)]">
                 <div className="flex flex-col gap-1">
                   <p className="text-body-xs font-semibold tracking-label text-slate uppercase">
                     For resale

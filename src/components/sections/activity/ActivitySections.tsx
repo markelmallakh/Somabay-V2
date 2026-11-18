@@ -70,7 +70,7 @@ export function ActivitySections({
                 href={rows.aside.href}
                 variant="outline"
                 icon="download"
-                className="border-turquoise text-turquoise"
+                className="border-deep text-turquoise"
                 // Downloads only once a real PDF is linked (a "#" placeholder would save the page).
                 download={rows.aside.href.endsWith(".pdf") || undefined}
               >

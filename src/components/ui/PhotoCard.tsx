@@ -13,15 +13,16 @@ type CardActionBarProps = {
 };
 
 /**
- * The site's card hover: a footer bar under a hairline that floods turquoise from the bottom when
- * its `group` card is hovered or focused, while the arrow turns to point right. Sits flush with the
- * card's bottom and sides, so put it last in a card with `overflow-hidden`.
+ * The site's card hover: a footer bar under a hairline that floods turquoise from the bottom
+ * (a pixel past the card's edge, so no dark seam shows at its rounded corners) when its `group`
+ * card is hovered or focused, while the arrow turns to point right. Sits flush with the card's
+ * bottom and sides, so put it last in a card with `overflow-hidden`.
  */
 export function CardActionBar({ label, tone = "dark", className }: CardActionBarProps) {
   return (
     <span
       className={cn(
-        "relative isolate flex items-center justify-between overflow-hidden border-t px-6 py-5 text-body-xs font-semibold tracking-label uppercase transition-colors duration-500",
+        "relative isolate flex items-center justify-between border-t px-6 py-5 text-body-xs font-semibold tracking-label uppercase transition-colors duration-500",
         tone === "dark"
           ? "border-white/30 text-white"
           : "border-line text-ink group-hover:text-white group-focus-visible:text-white",
@@ -30,7 +31,7 @@ export function CardActionBar({ label, tone = "dark", className }: CardActionBar
     >
       <span
         aria-hidden
-        className="absolute inset-0 -z-10 origin-bottom scale-y-0 bg-turquoise transition-transform duration-700 ease-out-expo group-hover:scale-y-100 group-focus-visible:scale-y-100"
+        className="absolute -inset-px -z-10 origin-bottom scale-y-0 bg-aqua transition-transform duration-700 ease-out-expo group-hover:scale-y-100 group-focus-visible:scale-y-100"
       />
       {label}
       <Icon
@@ -96,7 +97,8 @@ export function PhotoCard({
       draggable={draggable}
       tabIndex={tabIndex}
       className={cn(
-        "group relative isolate flex flex-col justify-between overflow-hidden rounded-md text-left text-white",
+        // A dark base under the photo, so no light edge shows round it as it zooms on hover.
+        "group relative isolate flex flex-col justify-between overflow-hidden rounded-md bg-black text-left text-white",
         className,
       )}
     >

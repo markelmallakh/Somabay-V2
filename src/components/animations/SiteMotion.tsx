@@ -264,7 +264,7 @@ export function SiteMotion() {
     <div
       ref={progress}
       aria-hidden
-      className="pointer-events-none fixed inset-x-0 top-0 z-[45] h-0.5 origin-left scale-x-0 bg-turquoise"
+      className="pointer-events-none fixed inset-x-0 top-0 z-[45] h-0.5 origin-left scale-x-0 bg-deep"
     />
   );
 }

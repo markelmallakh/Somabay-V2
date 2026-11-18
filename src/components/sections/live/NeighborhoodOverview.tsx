@@ -150,7 +150,7 @@ export function NeighborhoodOverview({
                       href="#"
                       variant="outline"
                       icon="download"
-                      className="border-turquoise text-turquoise"
+                      className="border-deep text-turquoise"
                     >
                       Download brochure
                     </Button>

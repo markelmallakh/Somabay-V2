@@ -36,7 +36,7 @@ function JobSection({ title, items }: { title: string; items: string[] }) {
       <ul className="flex flex-col gap-2.5 lg:col-span-7 lg:col-start-6">
         {items.map((item) => (
           <li key={item} className="flex gap-3 text-body-sm text-ink/85">
-            <span aria-hidden className="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-turquoise" />
+            <span aria-hidden className="mt-[0.6em] size-1.5 shrink-0 rounded-full bg-deep" />
             {item}
           </li>
         ))}

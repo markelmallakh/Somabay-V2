@@ -44,7 +44,7 @@ export function DirectoryRows({ items, interactive = true }: DirectoryRowsProps)
               {interactive ? (
                 <span
                   aria-hidden
-                  className="wave wave-group hidden size-12 shrink-0 place-items-center rounded-md border border-ink/20 transition-colors duration-500 group-hover:border-turquoise group-hover:text-white sm:grid"
+                  className="wave wave-group hidden size-12 shrink-0 place-items-center rounded-md border border-ink/20 transition-colors duration-500 group-hover:border-deep group-hover:text-white sm:grid"
                 >
                   <Icon name="arrow-right" className="size-4.5" />
                 </span>

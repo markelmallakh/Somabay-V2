@@ -68,7 +68,7 @@ export function BookingPanel({
         <Reveal delay={0.1} className="relative z-10 lg:col-span-6 lg:col-start-7 lg:row-start-1">
           <div
             className={cn(
-              "flex flex-col rounded-b-md p-5 sm:p-8 lg:rounded-md lg:px-10 lg:py-9 lg:shadow-[0_18px_48px_-28px_rgb(18_58_70/0.2)]",
+              "flex flex-col rounded-b-md p-5 sm:p-8 lg:rounded-md lg:px-10 lg:py-9 lg:shadow-[0_18px_48px_-28px_rgb(15_30_53/0.2)]",
               teal ? "bg-turquoise-160 text-white" : "bg-white",
             )}
           >

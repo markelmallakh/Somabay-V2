@@ -217,7 +217,7 @@ export function ResaleSection() {
             </div>
             <p className="text-body-lg">{resale.description}</p>
             <div>
-              <Button href={resale.cta.href} variant="primary" icon="arrow-up-right">
+              <Button href={resale.cta.href} variant="light" icon="arrow-up-right">
                 {resale.cta.label}
               </Button>
             </div>
