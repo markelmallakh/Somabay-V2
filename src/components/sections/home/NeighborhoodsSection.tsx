@@ -3,9 +3,13 @@ import { HeadingRow, PhoneEndCta } from "@/components/layout/HeadingRow";
 import { neighborhoodsIntro } from "@/content/home";
 import { neighborhoods } from "@/content/neighborhoods";
 import { Button } from "@/components/ui/Button";
-import { NeighborhoodsCarousel } from "./NeighborhoodsCarousel";
+import { NeighborhoodsIndex } from "./NeighborhoodsIndex";
 
-/** Figma "Section / Neighborhoods — Option B" (401:19351). */
+/**
+ * Neighborhoods as an index beside one large photo (`NeighborhoodsIndex`). The earlier card row,
+ * Figma "Section / Neighborhoods — Option B" (401:19351), is kept as `NeighborhoodsCarousel`: swap
+ * the component back to restore it (same props).
+ */
 export function NeighborhoodsSection() {
   const hrefs = Object.fromEntries(
     neighborhoods.map((item) => [item.slug, routes.neighborhood(item.slug)]),
@@ -22,7 +26,7 @@ export function NeighborhoodsSection() {
       // A clean white ground, so the photo cards carry the colour.
       className="relative overflow-hidden bg-white py-section text-ink"
     >
-      <NeighborhoodsCarousel
+      <NeighborhoodsIndex
         neighborhoods={neighborhoods}
         hrefs={hrefs}
         tabLabels={neighborhoodsIntro.tabs}

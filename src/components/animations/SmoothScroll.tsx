@@ -46,7 +46,38 @@ export function SmoothScroll() {
   }, []);
 
   useHashLanding();
+  useRefreshOnContentResize();
   return null;
+}
+
+/**
+ * ScrollTrigger measures where each pinned section starts once, and only measures again when the
+ * window resizes. When content above a pin changes height (a tab with fewer rows, an image or a
+ * card settling), the pin would start at the old position: the section scrolls up past the top,
+ * then snaps back down once the stale start is reached. Measure again whenever the page's height
+ * changes, once it has settled.
+ */
+function useRefreshOnContentResize() {
+  useEffect(() => {
+    registerGsap();
+    let height = document.body.scrollHeight;
+    let timer = 0;
+    const observer = new ResizeObserver(() => {
+      window.clearTimeout(timer);
+      timer = window.setTimeout(() => {
+        const next = document.body.scrollHeight;
+        if (Math.abs(next - height) < 2) return;
+        ScrollTrigger.refresh();
+        // The height after the refresh (pin spacers included), so the refresh doesn't trigger itself.
+        height = document.body.scrollHeight;
+      }, 150);
+    });
+    observer.observe(document.body);
+    return () => {
+      window.clearTimeout(timer);
+      observer.disconnect();
+    };
+  }, []);
 }
 
 /**

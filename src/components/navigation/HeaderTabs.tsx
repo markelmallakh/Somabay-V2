@@ -246,12 +246,12 @@ export function HeaderTabs({ items, onOpenChange, onDark }: HeaderTabsProps) {
               <m.div
                 key={item.href}
                 exit={{ opacity: 0, transition: { duration: 0.15 } }}
-                className="grid grid-cols-12 gap-10 p-10"
+                className="grid grid-cols-12 gap-8 p-4"
               >
-                <m.div {...rise(0)} className="col-span-3">
+                <m.div {...rise(0)} className="col-span-4">
                   {/* A picture of the section, not a link: the pages beside it are the way in. */}
-                  <div className="relative aspect-[4/3] overflow-hidden rounded-md text-white">
-                    <ResponsiveImage asset={item.image} alt="" sizes="22rem" fill />
+                  <div className="relative aspect-[3/2] overflow-hidden rounded-md text-white">
+                    <ResponsiveImage asset={item.image} alt="" sizes="28rem" fill />
                     <span
                       aria-hidden
                       className="absolute inset-0 bg-[linear-gradient(to_bottom,rgb(0_0_0/0)_40%,rgb(0_0_0/0.7)_100%)]"
@@ -282,7 +282,7 @@ function MegaGroups({ item, onNavigate }: { item: MenuItem; onNavigate: () => vo
   const flat = groups.every((group) => !nested(group));
 
   return (
-    <div className="col-span-9 flex flex-col">
+    <div className="col-span-8 flex flex-col py-3 pr-5">
       {flat ? (
         <ul className="grid grid-cols-3 gap-x-10 gap-y-4">
           {groups.map((group) => (

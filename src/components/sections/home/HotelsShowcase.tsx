@@ -110,80 +110,97 @@ export function HotelsShowcase({
         </div>
 
         {/* The card and the stay chips sit together at the foot of the photo. */}
-        <div className="flex flex-col gap-5">
-          {/* The chosen stay: a white card, photo beside its details. */}
-          <article
-            key={hotel.slug}
-            aria-labelledby={`spot-${hotel.slug}`}
-            className="mx-auto grid w-full max-w-[52rem] animate-rise gap-2 rounded-[1.75rem] bg-white p-2 text-ink shadow-[0_40px_80px_-30px_rgb(0_0_0/0.6)] motion-reduce:animate-none md:grid-cols-[minmax(0,19rem)_minmax(0,1fr)]"
-          >
-            <div className="relative aspect-[4/3] overflow-hidden rounded-[1.25rem] md:aspect-auto md:min-h-[19rem]">
-              <ResponsiveImage asset={cardPhoto} sizes="(min-width: 768px) 304px, 100vw" fill />
-            </div>
-            <div className="flex min-w-0 flex-col gap-5 px-3 pt-2 pb-3 md:px-5 md:py-4">
-              <div className="flex flex-col gap-3">
-                {/* High-contrast tag badges above the name. */}
-                <ul className="flex flex-wrap gap-1.5">
-                  {badges.map((badge) => (
-                    <li key={badge}>
-                      <span className="inline-flex items-center rounded-full bg-deep px-2.5 py-1 text-[0.6875rem] leading-none font-semibold tracking-[0.1em] text-white uppercase">
-                        {badge}
-                      </span>
-                    </li>
-                  ))}
-                </ul>
-                {/* The name with its star rating beside it: the sun-yellow "5 ★" StarChip. */}
-                <div className="flex flex-wrap items-center gap-3">
-                  <h3 id={`spot-${hotel.slug}`} className="text-heading-4 leading-[0.95]">
-                    {hotel.name}
-                  </h3>
-                  {hotel.stars ? <StarChip count={hotel.stars} /> : null}
-                </div>
-                <p className="line-clamp-4 text-body-sm text-slate">{hotel.description}</p>
-              </div>
-              {hotel.amenities.length ? (
-                <ul
-                  aria-label={`${hotel.name} amenities`}
-                  // A hairline and a clear gap keep the facilities apart from a longer story.
-                  className="grid grid-cols-2 gap-x-4 gap-y-2 border-t border-line pt-4"
-                >
-                  {hotel.amenities.slice(0, 4).map((amenity) => (
-                    <li key={amenity} className="flex min-w-0 items-center gap-2 text-body-xs">
-                      <Icon
-                        name={amenityIcon(amenity)}
-                        strokeWidth={1.5}
-                        className="size-4 shrink-0 text-deep"
-                      />
-                      <span className="truncate">{amenity}</span>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
-                {hotel.price ? <PriceFrom amount={hotel.price} /> : null}
-                <Button href={hotel.href} variant="turquoise" size="sm" icon="arrow-up-right">
-                  {ctaLabel}
-                  <span className="sr-only">: {hotel.name}</span>
-                </Button>
-              </div>
-            </div>
-          </article>
-
-          {/* Every stay as a compact glass pill, the row centred and still; bare arrows on each
-            side step through them. */}
-          <div className="flex items-center justify-center gap-2 sm:gap-3">
+        <div className="flex flex-col gap-10 sm:gap-14">
+          {/* The chosen stay: a white card, photo beside its details, with a tooltip caret under it
+              pointing down to the stay chips; one height for every stay from tablets up. Bare
+              arrows on each side step through the stays (phones tap or swipe the chips). */}
+          <div className="flex items-center justify-center gap-3 lg:gap-6">
             <button
               type="button"
               onClick={() => choose(active - 1)}
               aria-label="Previous stay"
-              className="grid size-9 shrink-0 place-items-center text-white/80 transition-colors duration-500 hover:text-aqua"
+              className="hidden size-12 shrink-0 place-items-center text-white/85 transition-colors duration-500 hover:text-aqua md:grid"
             >
-              <Icon name="chevron-left" className="size-6" />
+              <Icon name="chevron-left" className="size-9" />
             </button>
+            <article
+              key={hotel.slug}
+              aria-labelledby={`spot-${hotel.slug}`}
+              className="relative grid w-full max-w-[52rem] min-w-0 animate-rise gap-2 rounded-[1.75rem] bg-white p-2 text-ink shadow-[0_40px_80px_-30px_rgb(0_0_0/0.6)] motion-reduce:animate-none md:h-[25rem] md:grid-cols-[minmax(0,19rem)_minmax(0,1fr)] lg:h-[23rem]"
+            >
+              <span
+                aria-hidden
+                className="absolute -bottom-2 left-1/2 size-5 -translate-x-1/2 rotate-45 rounded-br-[0.3rem] bg-white"
+              />
+              <div className="relative aspect-[4/3] overflow-hidden rounded-[1.25rem] md:aspect-auto md:h-full">
+                <ResponsiveImage asset={cardPhoto} sizes="(min-width: 768px) 304px, 100vw" fill />
+              </div>
+              <div className="flex min-w-0 flex-col gap-5 px-3 pt-2 pb-3 md:overflow-hidden md:px-5 md:py-4">
+                <div className="flex flex-col gap-3">
+                  {/* The name with its star rating beside it: the sun-yellow "5 ★" StarChip. */}
+                  <div className="flex flex-wrap items-center gap-3">
+                    <h3 id={`spot-${hotel.slug}`} className="text-heading-4 leading-[0.95]">
+                      {hotel.name}
+                    </h3>
+                    {hotel.stars ? <StarChip count={hotel.stars} /> : null}
+                  </div>
+                  {/* The tag badges under the name, on the light grey-blue. */}
+                  <ul className="flex flex-wrap gap-1.5">
+                    {badges.map((badge) => (
+                      <li key={badge}>
+                        <span className="inline-flex items-center rounded-full bg-sand-100 px-2.5 py-1 text-[0.6875rem] leading-none font-semibold tracking-[0.1em] text-ink uppercase">
+                          {badge}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                  <p className="line-clamp-3 text-body-sm text-slate lg:line-clamp-4">
+                    {hotel.description}
+                  </p>
+                </div>
+                {hotel.amenities.length ? (
+                  <ul
+                    aria-label={`${hotel.name} amenities`}
+                    // A hairline and a clear gap keep the facilities apart from a longer story.
+                    className="grid grid-cols-2 gap-x-4 gap-y-2 border-t border-line pt-4"
+                  >
+                    {hotel.amenities.slice(0, 4).map((amenity) => (
+                      <li key={amenity} className="flex min-w-0 items-center gap-2 text-body-xs">
+                        <Icon
+                          name={amenityIcon(amenity)}
+                          strokeWidth={1.5}
+                          className="size-4 shrink-0 text-deep"
+                        />
+                        <span className="truncate">{amenity}</span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : null}
+                <div className="mt-auto flex flex-wrap items-center justify-between gap-3">
+                  {hotel.price ? <PriceFrom amount={hotel.price} /> : null}
+                  <Button href={hotel.href} variant="turquoise" size="sm" icon="arrow-up-right">
+                    {ctaLabel}
+                    <span className="sr-only">: {hotel.name}</span>
+                  </Button>
+                </div>
+              </div>
+            </article>
+            <button
+              type="button"
+              onClick={() => choose(active + 1)}
+              aria-label="Next stay"
+              className="hidden size-12 shrink-0 place-items-center text-white/85 transition-colors duration-500 hover:text-aqua md:grid"
+            >
+              <Icon name="chevron-right" className="size-9" />
+            </button>
+          </div>
+
+          {/* Every stay as a compact glass pill, the row centred and still. */}
+          <div className="flex justify-center">
             <ul
               aria-label="Choose a stay"
               // Phones: one row that swipes; larger screens: a centred row that wraps if it must.
-              className="scrollbar-none flex min-w-0 gap-1.5 overflow-x-auto sm:flex-wrap sm:justify-center sm:overflow-visible"
+              className="scrollbar-none flex min-w-0 gap-2 overflow-x-auto sm:flex-wrap sm:justify-center sm:overflow-visible"
             >
               {hotels.map((item, index) => {
                 const current = index === active;
@@ -194,14 +211,14 @@ export function HotelsShowcase({
                       aria-pressed={current}
                       onClick={() => choose(index)}
                       className={cn(
-                        "flex items-center gap-1.5 rounded-full border py-0.5 pr-3 pl-0.5 text-body-xs whitespace-nowrap backdrop-blur-md transition-colors duration-500",
+                        "flex items-center gap-2 rounded-full border py-1 pr-4 pl-1 text-body-sm whitespace-nowrap backdrop-blur-md transition-colors duration-500",
                         current
                           ? "border-white bg-white text-ink"
-                          : "border-white/20 bg-white/10 text-white/85 hover:border-white/50 hover:text-white",
+                          : "border-transparent bg-white/10 text-white/85 hover:bg-white/20 hover:text-white",
                       )}
                     >
-                      <span className="relative size-6 shrink-0 overflow-hidden rounded-full">
-                        <ResponsiveImage asset={item.image} sizes="24px" fill />
+                      <span className="relative size-8 shrink-0 overflow-hidden rounded-full">
+                        <ResponsiveImage asset={item.image} sizes="32px" fill />
                       </span>
                       <span className="font-medium">{item.name}</span>
                     </button>
@@ -209,14 +226,6 @@ export function HotelsShowcase({
                 );
               })}
             </ul>
-            <button
-              type="button"
-              onClick={() => choose(active + 1)}
-              aria-label="Next stay"
-              className="grid size-9 shrink-0 place-items-center text-white/80 transition-colors duration-500 hover:text-aqua"
-            >
-              <Icon name="chevron-right" className="size-6" />
-            </button>
           </div>
         </div>
       </Container>

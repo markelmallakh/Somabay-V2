@@ -49,8 +49,10 @@ export function MarinaPanel({
     if (!frame || !lineTop || !lineBottom) return;
 
     // The film's top and bottom edges push the two lines ahead of them, so the title always
-    // parts around the film and never sits over it.
-    const gap = 20;
+    // parts around the film and never sits over it. The lines sit tight (the second is pulled up
+    // into the first's empty space below its capitals), so the push is measured from the middle
+    // of that overlap: the lines start parting as soon as the film opens, never before.
+    const gap = () => (bottomEdge() - topEdge()) / 2;
     const topEdge = () => lineTop.offsetTop + lineTop.offsetHeight;
     const bottomEdge = () => lineBottom.offsetTop;
     const setTop = gsap.quickSetter(lineTop, "y", "px");
@@ -78,8 +80,10 @@ export function MarinaPanel({
       const r = radius * Math.min(1, (1 - k) / 0.25);
       frame.style.clipPath = `inset(${inset}% ${inset}% ${inset}% ${inset}% round ${r}px)`;
       const half = ((50 - inset) / 100) * vh;
-      setTop(Math.min(0, vh / 2 - half - gap - topEdge()));
-      setBottom(Math.max(0, vh / 2 + half + gap - bottomEdge()));
+      const g = gap();
+      const middle = (topEdge() + bottomEdge()) / 2;
+      setTop(Math.min(0, middle - half - g - topEdge()));
+      setBottom(Math.max(0, middle + half + g - bottomEdge()));
       setFade(1 - Math.min(Math.max((k - 0.55) / 0.3, 0), 1));
     };
     drawOpen();
@@ -155,7 +159,8 @@ export function MarinaPanel({
                 {lines[0]}
               </span>
             </span>
-            <span data-line-bottom className="block overflow-hidden pb-[0.08em]">
+            {/* Pulled up under the first line: capitals only, so the two lines can sit tight. */}
+            <span data-line-bottom className="-mt-[0.28em] block overflow-hidden pb-[0.08em]">
               <span data-rise className="block">
                 {lines[1]}
               </span>
